@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class patient : MonoBehaviour
+public class electrocardiogram : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()

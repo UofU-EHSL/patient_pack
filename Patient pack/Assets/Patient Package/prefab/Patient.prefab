@@ -458,6 +458,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd6b7920bff205b4c9e89b35ba30615e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ecg_object: {fileID: 0}
+  o2_object: {fileID: 0}
+  Co2_object: {fileID: 0}
+  awrr_object: {fileID: 0}
+  bp_object: {fileID: 0}
+  temp_object: {fileID: 0}
+  bloodVolume_object: {fileID: 0}
 --- !u!114 &4702819337186207564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1068,7 +1075,6 @@ GameObject:
   - component: {fileID: 2733363607676147602}
   - component: {fileID: 1869324765148144352}
   - component: {fileID: 1665983094275522426}
-  - component: {fileID: 4044021827495124076}
   m_Layer: 5
   m_Name: Heart rate
   m_TagString: Untagged
@@ -1158,89 +1164,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &4044021827495124076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7717400935902786125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 174e74302aac27d439d9bce31b08a4d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BloodPressureSystolic: 100
-  systolicMinValue: 70
-  systolicMin:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  systolicMaxValue: 180
-  systolicMax:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  systolicText: {fileID: 948819916517003852}
-  BloodPressureDiastolic: 70
-  diastolicMinValue: 39
-  diastolicMin:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  diastolicMaxValue: 100
-  diastolicMax:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  diastolicText: {fileID: 948819916517003852}
-  mean: {fileID: 948819916517003852}
-  meanMinValue: 70
-  meanMin:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  meanMaxValue: 200
-  meanMax:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  line_renderer: {fileID: 539391326206944028}
-  abp_line:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 1
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  ABP: 1
-  vertical_scale: 1
-  compression: 1
-  move_speed: 1
-  active: 0
 --- !u!1 &8288702908729026217
 GameObject:
   m_ObjectHideFlags: 0
