@@ -15,14 +15,24 @@ public class vital
 [ExecuteInEditMode]
 public class patient : MonoBehaviour
 {
+    public GameObject Vital_mods;
+    public Treatment[] treatments;
     public vital[] Vitals_visuals;
     public electrocardiogram ecg;
+    public float ecg_mod;
     public oxygen_saturation o2;
+    public float o2_mod;
     public capnography Co2;
+    public float Co2_mod;
     public airway_respiratory_rate awrr;
+    public float awrr_mod;
     public blood_pressure bp;
+    public float bp_systolic_mod;
+    public float bp_dyastolic_mod;
     public temperature temp;
+    public float temp_mod;
     public blood_volume bloodVolume;
+    public float bloodVolume_mod;
 
     public void updateViz()
     {
@@ -45,6 +55,7 @@ public class patient : MonoBehaviour
     {
     #if UNITY_EDITOR
         updateViz();
-    #endif
+#endif
+        treatments = GetComponentsInChildren<Treatment>();
     }
 }
