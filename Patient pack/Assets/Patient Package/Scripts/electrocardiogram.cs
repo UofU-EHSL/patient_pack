@@ -20,10 +20,4 @@ public class electrocardiogram : MonoBehaviour
             single.color = color;
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

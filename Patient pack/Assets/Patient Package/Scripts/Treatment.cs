@@ -1,24 +1,65 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
+[System.Serializable]
+public class vital_mod
+{
+    public string name;
+    public enum vitalType // your custom enumeration
+    {
+        BP_systolic,
+        BP_diastolic,
+        ecg,
+        O2,
+        CO2,
+        Awrr,
+        Temp,
+        BloodVolume
+    };
+
+    public vitalType vitalToMod;
+    public AnimationCurve StartCurve;
+    public AnimationCurve EndCurve;
+    public string[] fixes_isses;
+    public UnityEvent WhenApplied;
+    public string TimeItTakes;
+
+    [Header("Auto generated values")]
+    public float timeSinceTreatmentBegan;
+    public float CurrentValue;
+}
+
 
 public class Treatment : MonoBehaviour
 {
+    public enum category // your custom enumeration
+    {
+        Start,
+        Airway,
+        Breathing,
+        Circulation,
+        Treatmetns,
+        DiagnosticTest,
+        PhysicalExam,
+        Complete
+    };
+
     [TextArea(15, 20)]
     public string notes;
+    public category TreatmentCategory;
+
+    public vital_mod[] vitalMods;
 
     public GameObject doctor_manager;
     private GameObject active_doctor;
 
-    // Start is called before the first frame update
-    void Start()
+    public void NameUpdates()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        foreach (vital_mod item in vitalMods)
+        {
+            item.name = item.vitalToMod.ToString();
+        }
     }
 }

@@ -53,9 +53,6 @@ public class patient : MonoBehaviour
     }
     public void Update()
     {
-    #if UNITY_EDITOR
-        updateViz();
-#endif
         treatments = GetComponentsInChildren<Treatment>();
     }
 }
