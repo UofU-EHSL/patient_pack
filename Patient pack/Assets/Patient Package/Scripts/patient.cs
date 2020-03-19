@@ -7,9 +7,17 @@ using UnityEngine.UI;
 public class vital
 {
     public Color color;
-    public LineRenderer line_renderer;  
+    public LineRenderer line_renderer;
     public patient_line_renderer custom_line_renderer;
     public Text[] text_items;
+}
+
+[System.Serializable]
+public class vitalMod
+{
+    public string name;
+    public GameObject vitalGameobject;
+    public float Value_mod;
 }
 
 [ExecuteInEditMode]
@@ -18,21 +26,7 @@ public class patient : MonoBehaviour
     public GameObject Vital_mods;
     public Treatment[] treatments;
     public vital[] Vitals_visuals;
-    public electrocardiogram ecg;
-    public float ecg_mod;
-    public oxygen_saturation o2;
-    public float o2_mod;
-    public capnography Co2;
-    public float Co2_mod;
-    public airway_respiratory_rate awrr;
-    public float awrr_mod;
-    public blood_pressure bp;
-    public float bp_systolic_mod;
-    public float bp_dyastolic_mod;
-    public temperature temp;
-    public float temp_mod;
-    public blood_volume bloodVolume;
-    public float bloodVolume_mod;
+    public vitalMod[] mods;
 
     public void updateViz()
     {
@@ -46,7 +40,18 @@ public class patient : MonoBehaviour
                 one.color = single.color;
             }
         }
+
+        foreach (vitalMod single in mods)
+        {
+            single.name = single.vitalGameobject.name;
+        }
     }
+
+    public void updateMods()
+    {
+
+    }
+
     public void Start()
     {
         updateViz();

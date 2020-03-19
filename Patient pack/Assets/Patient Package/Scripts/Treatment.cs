@@ -16,7 +16,8 @@ public class vital_mod
         CO2,
         Awrr,
         Temp,
-        BloodVolume
+        BloodVolume,
+        LungVolume
     };
 
     public vitalType vitalToMod;
@@ -24,9 +25,11 @@ public class vital_mod
     public AnimationCurve EndCurve;
     public string[] fixes_isses;
     public UnityEvent WhenApplied;
+    public UnityEvent WhenFinished;
     public string TimeItTakes;
 
     [Header("Auto generated values")]
+    public bool isActive = true;
     public float timeSinceTreatmentBegan;
     public float CurrentValue;
 }
@@ -60,6 +63,20 @@ public class Treatment : MonoBehaviour
         foreach (vital_mod item in vitalMods)
         {
             item.name = item.vitalToMod.ToString();
+        }
+    }
+
+    public void Update()
+    {
+        if (gameObject.transform.name == "Vital mods")
+        {
+            foreach (vital_mod vital in vitalMods)
+            {
+                if (vital.isActive)
+                {
+                    vital.CurrentValue = vital.StartCurve.Evaluate(vital.timeSinceTreatmentBegan);
+                }
+            }
         }
     }
 }
