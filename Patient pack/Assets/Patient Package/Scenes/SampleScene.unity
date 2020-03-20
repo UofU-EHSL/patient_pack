@@ -2644,6 +2644,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3015216116482014053}
     m_Modifications:
+    - target: {fileID: 643027021581889824, guid: c60322108004eb24cb24debe410c4a05,
+        type: 3}
+      propertyPath: bpmText
+      value: 
+      objectReference: {fileID: 7327661157310582372}
+    - target: {fileID: 643027021581889824, guid: c60322108004eb24cb24debe410c4a05,
+        type: 3}
+      propertyPath: bpmMaxValue
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 643027021581889824, guid: c60322108004eb24cb24debe410c4a05,
+        type: 3}
+      propertyPath: line_renderer
+      value: 
+      objectReference: {fileID: 8063620219137883956}
+    - target: {fileID: 7174683216325498636, guid: c60322108004eb24cb24debe410c4a05,
+        type: 3}
+      propertyPath: m_Text
+      value: BPM
+      objectReference: {fileID: 0}
     - target: {fileID: 7202886278702760810, guid: c60322108004eb24cb24debe410c4a05,
         type: 3}
       propertyPath: m_Name
@@ -3127,6 +3147,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300869283698683153, guid: ca16e737bb46a4f408e912f5160edcb1,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300869283698683153, guid: ca16e737bb46a4f408e912f5160edcb1,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca16e737bb46a4f408e912f5160edcb1, type: 3}

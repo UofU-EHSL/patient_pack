@@ -11,14 +11,14 @@ public class blood_pressure : MonoBehaviour
     public UnityEvent systolicMin;
     public int systolicMaxValue;
     public UnityEvent systolicMax;
-    public Text systolicText;
+    //public Text systolicText;
     [Header("DIASTOLIC")]
     public float BloodPressureDiastolic;
     public int diastolicMinValue;
     public UnityEvent diastolicMin;
     public int diastolicMaxValue;
     public UnityEvent diastolicMax;
-    public Text diastolicText;
+    //public Text diastolicText;
     [Header("MEAN")]
     public Text mean;
     public int meanMinValue;
@@ -37,8 +37,10 @@ public class blood_pressure : MonoBehaviour
     private float nextActionTime = 0.0f;
     private float active_time;
 
+    private string valuesString = "";
+
     //other
-    private void Update()
+    private void FixedUpdate()
     {
         float bpm = 60;
         //systolid max and min events
@@ -49,11 +51,11 @@ public class blood_pressure : MonoBehaviour
         else if (BloodPressureSystolic < systolicMinValue || bpm == 0)
         {
             systolicMin.Invoke();
-            systolicText.text = "--/";
+            valuesString = "--/";
         }
         else
         {
-            systolicText.text = BloodPressureSystolic.ToString("F0") + "/";
+            valuesString = BloodPressureSystolic.ToString("F0") + "/";
         }
         //diastolic max and min events
         if (BloodPressureDiastolic > diastolicMaxValue)
@@ -63,11 +65,11 @@ public class blood_pressure : MonoBehaviour
         else if (BloodPressureDiastolic < diastolicMinValue || bpm == 0)
         {
             diastolicMin.Invoke();
-            diastolicText.text = "--";
+            valuesString += "--";
         }
         else
         {
-            diastolicText.text = BloodPressureDiastolic.ToString("F0");
+            valuesString += BloodPressureDiastolic.ToString("F0");
         }
         //mean max and min events
         if (((BloodPressureDiastolic + BloodPressureSystolic) / 2) > meanMaxValue)
@@ -77,14 +79,14 @@ public class blood_pressure : MonoBehaviour
         else if (((BloodPressureDiastolic + BloodPressureSystolic) / 2) < meanMinValue || bpm == 0)
         {
             meanMin.Invoke();
-            mean.text = "(--)";
+            valuesString += "\n(--)";
         }
         else
         {
-            mean.text = "(" + ((BloodPressureDiastolic + BloodPressureSystolic) / 2).ToString("F0") + ")";
+            valuesString += "\n(" + ((BloodPressureDiastolic + BloodPressureSystolic) / 2).ToString("F0") + ")";
         }
 
-
+        mean.text = valuesString;
 
 
         ///////this is the "other" section
@@ -94,6 +96,8 @@ public class blood_pressure : MonoBehaviour
             nextActionTime += 60 / ABP;
             active = true;
         }
+
+
         //vibration value limit
 
         if (active == true)
