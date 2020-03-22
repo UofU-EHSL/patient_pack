@@ -19,7 +19,6 @@ public class oxygen_saturation : MonoBehaviour
     public patient_line_renderer line_renderer;
     public AnimationCurve spo2_line;
     public float value = 1;
-    public float vertical_scale;
     public float compression;
     public float move_speed;
     public bool active;
