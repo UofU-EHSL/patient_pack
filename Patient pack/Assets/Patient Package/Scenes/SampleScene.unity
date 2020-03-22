@@ -1452,6 +1452,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3015216116482014053}
     m_Modifications:
+    - target: {fileID: 1238885879078280042, guid: 0c196dbfe719637418ffb3aab335df2b,
+        type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 1727345862}
     - target: {fileID: 1238885879078280045, guid: 0c196dbfe719637418ffb3aab335df2b,
         type: 3}
       propertyPath: m_Name
@@ -1679,6 +1684,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3015216116482014053}
     m_Modifications:
+    - target: {fileID: 7127141354283781499, guid: df9deceed6ddb8b4c80c5b788589ebf8,
+        type: 3}
+      propertyPath: volume
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7127141354283781499, guid: df9deceed6ddb8b4c80c5b788589ebf8,
+        type: 3}
+      propertyPath: max
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7127141354283781499, guid: df9deceed6ddb8b4c80c5b788589ebf8,
+        type: 3}
+      propertyPath: min
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7127141354283781499, guid: df9deceed6ddb8b4c80c5b788589ebf8,
+        type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 7207632475430068462}
     - target: {fileID: 8947804641709824073, guid: df9deceed6ddb8b4c80c5b788589ebf8,
         type: 3}
       propertyPath: m_Parameters.colorGradient.key0.b
@@ -2803,6 +2828,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3015216116482014053}
     m_Modifications:
+    - target: {fileID: 3217529580060408708, guid: 4bcc2d447590fd74492004a35138dadf,
+        type: 3}
+      propertyPath: volume
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217529580060408708, guid: 4bcc2d447590fd74492004a35138dadf,
+        type: 3}
+      propertyPath: max
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217529580060408708, guid: 4bcc2d447590fd74492004a35138dadf,
+        type: 3}
+      propertyPath: min
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217529580060408708, guid: 4bcc2d447590fd74492004a35138dadf,
+        type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 1027414919}
     - target: {fileID: 3217529580060408709, guid: 4bcc2d447590fd74492004a35138dadf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4087,6 +4132,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Temperature
+      objectReference: {fileID: 0}
+    - target: {fileID: 7356032832482545881, guid: 63a6d9d725bccb44a88ff87c5b9906bb,
+        type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 1353702770}
+    - target: {fileID: 7356032832482545881, guid: 63a6d9d725bccb44a88ff87c5b9906bb,
+        type: 3}
+      propertyPath: temp
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 7356032832482545881, guid: 63a6d9d725bccb44a88ff87c5b9906bb,
+        type: 3}
+      propertyPath: max
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7356032832482545881, guid: 63a6d9d725bccb44a88ff87c5b9906bb,
+        type: 3}
+      propertyPath: min
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 7356032832482545885, guid: 63a6d9d725bccb44a88ff87c5b9906bb,
         type: 3}
