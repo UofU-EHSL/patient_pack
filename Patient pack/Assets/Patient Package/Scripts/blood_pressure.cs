@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 public class blood_pressure : MonoBehaviour
 {
+    [TextArea(15, 20)]
+    public string notes;
+
     [Header("SYSTOLIC")]
     public float BloodPressureSystolic;
     public int systolicMinValue;

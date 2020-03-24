@@ -7,8 +7,9 @@ using UnityEngine.Events;
 
 public class temperature : MonoBehaviour
 {
-    
-    
+    [TextArea(15, 20)]
+    public string notes;
+
     public float temp;
     public Text text;
     public int max;

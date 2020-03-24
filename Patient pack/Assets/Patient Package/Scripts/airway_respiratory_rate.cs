@@ -7,6 +7,9 @@ using UnityEngine.Events;
 
 public class airway_respiratory_rate : MonoBehaviour
 {
+    [TextArea(15, 20)]
+    public string notes;
+
     public bool isBreathing;
     private float temp_breathsPerMinute;
     public float BreathsPerMinute;

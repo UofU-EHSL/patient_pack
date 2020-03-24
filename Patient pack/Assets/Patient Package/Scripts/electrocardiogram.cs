@@ -22,7 +22,9 @@ public class electrocardiogram : MonoBehaviour
          }
      }
      */
-    
+    [TextArea(15, 20)]
+    public string notes;
+
     [Header("ECG")]
     public Text bpmText;
     public int bpmMinValue;

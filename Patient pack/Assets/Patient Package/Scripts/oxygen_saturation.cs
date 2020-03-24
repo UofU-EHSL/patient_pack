@@ -6,6 +6,9 @@ using UnityEngine.Events;
 
 public class oxygen_saturation : MonoBehaviour
 {
+    [TextArea(15, 20)]
+    public string notes;
+
     public float OxygenSaturation;
     public Text text;
     public int o2MinValue;

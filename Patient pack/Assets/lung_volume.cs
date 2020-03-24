@@ -6,6 +6,9 @@ using UnityEngine.Events;
 
 public class lung_volume : MonoBehaviour
 {
+    [TextArea(15, 20)]
+    public string notes;
+
     public float volume;
     public Text text;
     public int max;

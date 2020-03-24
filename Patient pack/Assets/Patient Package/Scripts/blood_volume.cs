@@ -6,6 +6,9 @@ using UnityEngine.Events;
 
 public class blood_volume : MonoBehaviour
 {
+    [TextArea(15, 20)]
+    public string notes;
+
     // Start is called before the first frame update
     public float volume;
     public Text text;

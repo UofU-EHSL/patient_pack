@@ -6,6 +6,9 @@ using UnityEngine.Events;
 
 public class capnography : MonoBehaviour
 {
+    [TextArea(15, 20)]
+    public string notes;
+
     private float nextActionTime = 0.0f;
     public float co2 = 1;
     public float baseCO2 = 1;
