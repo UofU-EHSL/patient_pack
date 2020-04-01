@@ -8,7 +8,8 @@ public class oxygen_saturation : MonoBehaviour
 {
     [TextArea(15, 20)]
     public string notes;
-
+    [HideInInspector]
+    public float StartingOxygentSaturation;
     public float OxygenSaturation;
     public Text text;
     public int o2MinValue;
@@ -29,7 +30,10 @@ public class oxygen_saturation : MonoBehaviour
     private float active_time;
     public airway_respiratory_rate awrr;
 
-
+    private void Start()
+    {
+        StartingOxygentSaturation = OxygenSaturation;
+    }
     void FixedUpdate()
     {
 

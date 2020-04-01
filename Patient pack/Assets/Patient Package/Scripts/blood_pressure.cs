@@ -14,14 +14,18 @@ public class blood_pressure : MonoBehaviour
     public UnityEvent systolicMin;
     public int systolicMaxValue;
     public UnityEvent systolicMax;
-    //public Text systolicText;
+    [HideInInspector]
+    public float StartingSystolic;
+    
     [Header("DIASTOLIC")]
     public float BloodPressureDiastolic;
     public int diastolicMinValue;
     public UnityEvent diastolicMin;
     public int diastolicMaxValue;
     public UnityEvent diastolicMax;
-    //public Text diastolicText;
+    [HideInInspector]
+    public float StartingDiastolic;
+
     [Header("MEAN")]
     public Text mean;
     public int meanMinValue;

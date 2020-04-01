@@ -11,7 +11,8 @@ public class airway_respiratory_rate : MonoBehaviour
     public string notes;
 
     public bool isBreathing;
-    private float temp_breathsPerMinute;
+    [HideInInspector]
+    public float StartingBreathsPerMinute;
     public float BreathsPerMinute;
     public Text text;
     public int max;
@@ -21,7 +22,7 @@ public class airway_respiratory_rate : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
-        temp_breathsPerMinute = BreathsPerMinute;
+        StartingBreathsPerMinute = BreathsPerMinute;
     }
     void Update()
     {

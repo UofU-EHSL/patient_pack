@@ -10,6 +10,9 @@ public class capnography : MonoBehaviour
     public string notes;
 
     private float nextActionTime = 0.0f;
+
+    [HideInInspector]
+    public float StartingCO2;
     public float co2 = 1;
     public float baseCO2 = 1;
     public float vertical_scale = 1;
@@ -38,7 +41,7 @@ public class capnography : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //pulse_line.keys[5].value = R_height; 
+        StartingCO2 = co2;
         
     }
     // Update is called once per frame

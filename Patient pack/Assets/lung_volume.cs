@@ -9,6 +9,8 @@ public class lung_volume : MonoBehaviour
     [TextArea(15, 20)]
     public string notes;
 
+    [HideInInspector]
+    public float StartingVolume;
     public float volume;
     public Text text;
     public int max;
@@ -17,6 +19,10 @@ public class lung_volume : MonoBehaviour
     public UnityEvent minEvent;
     // Update is called once per frame
 
+    private void Start()
+    {
+        StartingVolume = volume;
+    }
     void Update()
     {
         text.text = volume.ToString("F0");

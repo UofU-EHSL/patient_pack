@@ -9,7 +9,8 @@ public class temperature : MonoBehaviour
 {
     [TextArea(15, 20)]
     public string notes;
-
+    [HideInInspector]
+    public float StartingTemp;
     public float temp;
     public Text text;
     public int max;
@@ -17,7 +18,11 @@ public class temperature : MonoBehaviour
     public int min;
     public UnityEvent minEvent;
     // Update is called once per frame
-    
+
+    private void Start()
+    {
+        StartingTemp = temp;
+    }
     void Update()
     {
         text.text = temp.ToString("F0");

@@ -58,6 +58,12 @@ public class Treatment : MonoBehaviour
     public GameObject doctor_manager;
     private GameObject active_doctor;
 
+    private void Start()
+    {
+        VitalMods mods = GameObject.FindGameObjectWithTag("Mod").GetComponent<VitalMods>();
+        mods.AddTreatment(this);
+    }
+
     public void NameUpdates()
     {
         foreach (vital_mod item in vitalMods)
