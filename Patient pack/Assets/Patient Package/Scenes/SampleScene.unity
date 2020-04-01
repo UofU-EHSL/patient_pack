@@ -942,6 +942,96 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1509756051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1509756052}
+  - component: {fileID: 1509756053}
+  m_Layer: 0
+  m_Name: Mod
+  m_TagString: Mod
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1509756052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509756051}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5607158735508168363}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1509756053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509756051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a51d42b6777fb4f8a725f885f45bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notes: 
+  Patient: {fileID: 3015216117146684410}
+  Systolic:
+    useMod: 0
+    modValue: 0
+    Vital: {fileID: 2024542618}
+    mods: []
+  Diastolic:
+    useMod: 0
+    modValue: 0
+    Vital: {fileID: 2024542618}
+    mods: []
+  HeartRate:
+    useMod: 0
+    modValue: 0
+    Vital: {fileID: 2112003286}
+    mods: []
+  OxygenSaturation:
+    useMod: 0
+    modValue: 0
+    Vital: {fileID: 728101874}
+    mods: []
+  Capnography:
+    useMod: 0
+    modValue: 0
+    Vital: {fileID: 387090667}
+    mods: []
+  Awrr:
+    useMod: 0
+    modValue: 0
+    Vital: {fileID: 558036432}
+    mods: []
+  Temperature:
+    useMod: 0
+    modValue: 0
+    Vital: {fileID: 21048576}
+    mods: []
+  BloodVolume:
+    useMod: 0
+    modValue: 0
+    Vital: {fileID: 490905807}
+    mods: []
+  LungVolume:
+    useMod: 0
+    modValue: 0
+    Vital: {fileID: 7207632473552923368}
+    mods: []
 --- !u!114 &1540620113 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3217529579879273814, guid: 4bcc2d447590fd74492004a35138dadf,
@@ -3113,7 +3203,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -170.42839, y: -343.08862, z: -0.58618927}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1509756052}
   m_Father: {fileID: 3015216117146684411}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
