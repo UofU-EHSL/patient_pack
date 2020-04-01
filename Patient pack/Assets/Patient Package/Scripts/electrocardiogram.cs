@@ -50,11 +50,18 @@ public class electrocardiogram : MonoBehaviour
     public float STSegment;
     public float TWave;
     public float temp_wait;
-    //other
+
+    public float BeatsPerMinute = 60;
+    public float StartingBeatsPerMinute;
+
+
+    private void Start()
+    {
+        StartingBeatsPerMinute = BeatsPerMinute;
+    }
     private void FixedUpdate()
     {
-        float bpm = 60;
-        bpmText.text = bpm.ToString();
+        bpmText.text = ((int)BeatsPerMinute).ToString();
 
 
         Keyframe[] keys = bpm_line.keys;
@@ -75,14 +82,14 @@ public class electrocardiogram : MonoBehaviour
 
         if (Time.time > nextActionTime)
         {
-            if (bpm <= bpmMinValue)
+            if (BeatsPerMinute <= bpmMinValue)
             {
                 nextActionTime += 1 / bpmMinValue;
                 active = true;
             }
             else
             {
-                nextActionTime += 60 / bpm;
+                nextActionTime += 60 / BeatsPerMinute;
                 active = true;
             }
         }

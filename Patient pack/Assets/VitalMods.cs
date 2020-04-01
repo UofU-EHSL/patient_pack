@@ -99,91 +99,101 @@ public class VitalMods : MonoBehaviour
 
         if (Awrr.useMod)
         {
-            float tempMod = 0;
+            Awrr.modValue = 0;
             foreach(vital_mod vm in Awrr.mods)
             {
-                tempMod += vm.CurrentValue;
+                Awrr.modValue += vm.CurrentValue;
             }
             airway_respiratory_rate vitalScript = Awrr.Vital.GetComponent<airway_respiratory_rate>();
-            vitalScript.BreathsPerMinute = vitalScript.StartingBreathsPerMinute + tempMod;
+            vitalScript.BreathsPerMinute = vitalScript.StartingBreathsPerMinute + Awrr.modValue;
         }
 
         if (BloodVolume.useMod)
         {
-            float tempMod = 0;
+            BloodVolume.modValue = 0;
             foreach (vital_mod vm in BloodVolume.mods)
             {
-                tempMod += vm.CurrentValue;
+                BloodVolume.modValue += vm.CurrentValue;
             }
             blood_volume vitalScript = BloodVolume.Vital.GetComponent<blood_volume>();
-            vitalScript.volume = vitalScript.StartingVolume + tempMod;
+            vitalScript.volume = vitalScript.StartingVolume + BloodVolume.modValue;
         }
 
         if (Systolic.useMod)
         {
-            float tempMod = 0;
+            Systolic.modValue = 0;
             foreach (vital_mod vm in Systolic.mods)
             {
-                tempMod += vm.CurrentValue;
+                Systolic.modValue += vm.CurrentValue;
             }
             blood_pressure vitalScript = Systolic.Vital.GetComponent<blood_pressure>();
-            Debug.Log("STARTING: " + vitalScript.StartingSystolic + " TEMP: " + tempMod);
-            vitalScript.BloodPressureSystolic = vitalScript.StartingSystolic + tempMod;
+            vitalScript.BloodPressureSystolic = vitalScript.StartingSystolic + Systolic.modValue;
         }
 
         if (Diastolic.useMod)
         {
-            float tempMod = 0;
+            Diastolic.modValue = 0;
             foreach (vital_mod vm in Diastolic.mods)
             {
-                tempMod += vm.CurrentValue;
+                Diastolic.modValue += vm.CurrentValue;
             }
             blood_pressure vitalScript = Diastolic.Vital.GetComponent<blood_pressure>();
-            vitalScript.BloodPressureDiastolic = vitalScript.StartingDiastolic + tempMod;
+            vitalScript.BloodPressureDiastolic = vitalScript.StartingDiastolic + Diastolic.modValue;
+        }
+
+        if (HeartRate.useMod)
+        {
+            HeartRate.modValue = 0;
+            foreach (vital_mod vm in HeartRate.mods)
+            {
+                HeartRate.modValue += vm.CurrentValue;
+            }
+            electrocardiogram vitalScript = HeartRate.Vital.GetComponent<electrocardiogram>();
+            vitalScript.BeatsPerMinute = vitalScript.StartingBeatsPerMinute + HeartRate.modValue;
         }
 
         if (Capnography.useMod)
         {
-            float tempMod = 0;
+            Capnography.modValue = 0;
             foreach (vital_mod vm in Capnography.mods)
             {
-                tempMod += vm.CurrentValue;
+                Capnography.modValue += vm.CurrentValue;
             }
             capnography vitalScript = Capnography.Vital.GetComponent<capnography>();
-            vitalScript.co2 = vitalScript.StartingCO2 + tempMod;
+            vitalScript.co2 = vitalScript.StartingCO2 + Capnography.modValue;
         }
 
         if (OxygenSaturation.useMod)
         {
-            float tempMod = 0;
+            OxygenSaturation.modValue = 0;
             foreach (vital_mod vm in OxygenSaturation.mods)
             {
-                tempMod += vm.CurrentValue;
+                OxygenSaturation.modValue += vm.CurrentValue;
             }
             oxygen_saturation vitalScript = OxygenSaturation.Vital.GetComponent<oxygen_saturation>();
-            vitalScript.OxygenSaturation = vitalScript.StartingOxygentSaturation + tempMod;
+            vitalScript.OxygenSaturation = vitalScript.StartingOxygentSaturation + OxygenSaturation.modValue;
         }
 
         if (LungVolume.useMod)
         {
-            float tempMod = 0;
+            LungVolume.modValue = 0;
             foreach (vital_mod vm in LungVolume.mods)
             {
-                tempMod += vm.CurrentValue;
+                LungVolume.modValue += vm.CurrentValue;
             }
             lung_volume vitalScript = LungVolume.Vital.GetComponent<lung_volume>();
-            vitalScript.volume = vitalScript.StartingVolume + tempMod;
+            vitalScript.volume = vitalScript.StartingVolume + LungVolume.modValue;
         }
 
         if (Temperature.useMod)
         {
-            float tempMod = 0;
+            Temperature.modValue = 0;
             foreach (vital_mod vm in Temperature.mods)
             {
-                tempMod += vm.CurrentValue;
+                Temperature.modValue += vm.CurrentValue;
             }
             temperature vitalScript = Temperature.Vital.GetComponent<temperature>();
-            vitalScript.temp = vitalScript.StartingTemp + tempMod;
+            vitalScript.temp = vitalScript.StartingTemp + Temperature.modValue;
         }
     }
 

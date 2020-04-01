@@ -75,11 +75,14 @@ public class Treatment : MonoBehaviour
 
     private void Start()
     {
-        VitalMods mods = GameObject.FindGameObjectWithTag("Mod").GetComponent<VitalMods>();
-        mods.AddTreatment(this);
-        foreach(vital_mod vm in vitalMods)
+        if (gameObject.transform.parent.name == "Vital mods")
         {
-            vm.SetActive();
+            VitalMods mods = GameObject.FindGameObjectWithTag("Mod").GetComponent<VitalMods>();
+            mods.AddTreatment(this);
+            foreach (vital_mod vm in vitalMods)
+            {
+                vm.SetActive();
+            }
         }
     }
 
