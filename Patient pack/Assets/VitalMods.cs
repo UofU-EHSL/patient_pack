@@ -115,7 +115,7 @@ public class VitalMods : MonoBehaviour
             {
                 tempMod += vm.CurrentValue;
             }
-            blood_volume vitalScript = Awrr.Vital.GetComponent<blood_volume>();
+            blood_volume vitalScript = BloodVolume.Vital.GetComponent<blood_volume>();
             vitalScript.volume = vitalScript.StartingVolume + tempMod;
         }
 
@@ -126,7 +126,8 @@ public class VitalMods : MonoBehaviour
             {
                 tempMod += vm.CurrentValue;
             }
-            blood_pressure vitalScript = Awrr.Vital.GetComponent<blood_pressure>();
+            blood_pressure vitalScript = Systolic.Vital.GetComponent<blood_pressure>();
+            Debug.Log("STARTING: " + vitalScript.StartingSystolic + " TEMP: " + tempMod);
             vitalScript.BloodPressureSystolic = vitalScript.StartingSystolic + tempMod;
         }
 
@@ -137,7 +138,7 @@ public class VitalMods : MonoBehaviour
             {
                 tempMod += vm.CurrentValue;
             }
-            blood_pressure vitalScript = Awrr.Vital.GetComponent<blood_pressure>();
+            blood_pressure vitalScript = Diastolic.Vital.GetComponent<blood_pressure>();
             vitalScript.BloodPressureDiastolic = vitalScript.StartingDiastolic + tempMod;
         }
 
@@ -148,7 +149,7 @@ public class VitalMods : MonoBehaviour
             {
                 tempMod += vm.CurrentValue;
             }
-            capnography vitalScript = Awrr.Vital.GetComponent<capnography>();
+            capnography vitalScript = Capnography.Vital.GetComponent<capnography>();
             vitalScript.co2 = vitalScript.StartingCO2 + tempMod;
         }
 
@@ -159,7 +160,7 @@ public class VitalMods : MonoBehaviour
             {
                 tempMod += vm.CurrentValue;
             }
-            oxygen_saturation vitalScript = Awrr.Vital.GetComponent<oxygen_saturation>();
+            oxygen_saturation vitalScript = OxygenSaturation.Vital.GetComponent<oxygen_saturation>();
             vitalScript.OxygenSaturation = vitalScript.StartingOxygentSaturation + tempMod;
         }
 
@@ -170,7 +171,7 @@ public class VitalMods : MonoBehaviour
             {
                 tempMod += vm.CurrentValue;
             }
-            lung_volume vitalScript = Awrr.Vital.GetComponent<lung_volume>();
+            lung_volume vitalScript = LungVolume.Vital.GetComponent<lung_volume>();
             vitalScript.volume = vitalScript.StartingVolume + tempMod;
         }
 
@@ -181,7 +182,7 @@ public class VitalMods : MonoBehaviour
             {
                 tempMod += vm.CurrentValue;
             }
-            temperature vitalScript = Awrr.Vital.GetComponent<temperature>();
+            temperature vitalScript = Temperature.Vital.GetComponent<temperature>();
             vitalScript.temp = vitalScript.StartingTemp + tempMod;
         }
     }

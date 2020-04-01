@@ -31,7 +31,22 @@ public class vital_mod
     [Header("Auto generated values")]
     public bool isActive = true;
     public float timeSinceTreatmentBegan;
+    public float StartTime;
     public float CurrentValue;
+
+    public void SetInactive()
+    {
+        isActive = false;
+        timeSinceTreatmentBegan = 0;
+        StartTime = Time.time;
+    }
+
+    public void SetActive()
+    {
+        isActive = true;
+        timeSinceTreatmentBegan = 0;
+        StartTime = Time.time;
+    }
 }
 
 
@@ -62,6 +77,10 @@ public class Treatment : MonoBehaviour
     {
         VitalMods mods = GameObject.FindGameObjectWithTag("Mod").GetComponent<VitalMods>();
         mods.AddTreatment(this);
+        foreach(vital_mod vm in vitalMods)
+        {
+            vm.SetActive();
+        }
     }
 
     public void NameUpdates()
@@ -72,15 +91,26 @@ public class Treatment : MonoBehaviour
         }
     }
 
-    public void Update()
+    public void FixedUpdate()
     {
-        if (gameObject.transform.name == "Vital mods")
+        if (gameObject.transform.parent.name == "Vital mods")
         {
+            
             foreach (vital_mod vital in vitalMods)
             {
                 if (vital.isActive)
                 {
+                    vital.timeSinceTreatmentBegan = Time.time - vital.StartTime;
                     vital.CurrentValue = vital.StartCurve.Evaluate(vital.timeSinceTreatmentBegan);
+                    if(vital.StartCurve.Evaluate(vital.timeSinceTreatmentBegan) == vital.StartCurve.keys[vital.StartCurve.keys.Length-1].value)
+                    {
+                        vital.SetInactive();
+                    }
+                }
+                else
+                {
+                    vital.timeSinceTreatmentBegan = Time.time - vital.StartTime;
+                    vital.CurrentValue = vital.EndCurve.Evaluate(vital.timeSinceTreatmentBegan);
                 }
             }
         }

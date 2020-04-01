@@ -46,6 +46,11 @@ public class blood_pressure : MonoBehaviour
 
     private string valuesString = "";
 
+    private void Start()
+    {
+        StartingDiastolic = BloodPressureDiastolic;
+        StartingSystolic = BloodPressureSystolic;
+    }
     //other
     private void FixedUpdate()
     {
