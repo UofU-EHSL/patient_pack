@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+
+
 [System.Serializable]
 public class vital_mod
 {
@@ -23,7 +25,15 @@ public class vital_mod
     public vitalType vitalToMod;
     public AnimationCurve StartCurve;
     public AnimationCurve EndCurve;
-    public string[] fixes_isses;
+
+    [System.Serializable]
+    public class issue
+    {
+        public string name;
+        public vitalType vitalType;
+    }
+
+    public issue[] fixes_isses;
     public UnityEvent WhenApplied;
     public UnityEvent WhenFinished;
     public string TimeItTakes;
@@ -36,9 +46,26 @@ public class vital_mod
 
     public void SetInactive()
     {
-        isActive = false;
+        //Adjusts the come down time speed. 
+        Keyframe[] keys = EndCurve.keys;
+
+        float start = keys[0].time;
+        float end = keys[1].time;
+        float diffTime = end - start;
+        float max = keys[0].value;
+        float min = keys[1].value;
+        float diffValue = max - min;
+
+        float percentage = CurrentValue / diffValue;
+
+        keys[0].value = CurrentValue;
+        keys[1].time = (int)(end * percentage);
+
+        EndCurve.keys = keys;
         timeSinceTreatmentBegan = 0;
         StartTime = Time.time;
+        isActive = false;
+
     }
 
     public void SetActive()
@@ -82,8 +109,34 @@ public class Treatment : MonoBehaviour
             foreach (vital_mod vm in vitalMods)
             {
                 vm.SetActive();
+                if(vm.fixes_isses.Length > 0)
+                {
+                    foreach(vital_mod.issue i in vm.fixes_isses)
+                    {
+                        //search through the vital mod's children then find the one with the name
+                        //set the vm in that treatment to inactive. 
+                        Treatment[] treatments = mods.gameObject.transform.GetComponentsInChildren<Treatment>();
+                        foreach(Treatment t in treatments)
+                        {
+                            if (t.name.Contains(i.name)){
+                                
+                                foreach(vital_mod v in t.vitalMods)
+                                {
+                                    if (v.vitalToMod == i.vitalType)
+                                    {
+                                        Debug.Log("HERE");
+                                        v.SetInactive();
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
             }
         }
+
+        
     }
 
     public void NameUpdates()
@@ -107,7 +160,7 @@ public class Treatment : MonoBehaviour
                     vital.CurrentValue = vital.StartCurve.Evaluate(vital.timeSinceTreatmentBegan);
                     if(vital.StartCurve.Evaluate(vital.timeSinceTreatmentBegan) == vital.StartCurve.keys[vital.StartCurve.keys.Length-1].value)
                     {
-                        vital.SetInactive();
+                        //vital.SetInactive();
                     }
                 }
                 else

@@ -168,15 +168,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 800632101}
-  - {fileID: 400156896}
-  - {fileID: 2132393939}
-  - {fileID: 2001469749}
-  - {fileID: 803285185}
-  - {fileID: 1826359184}
-  - {fileID: 592079535}
-  - {fileID: 1548995157}
-  - {fileID: 461187366}
-  - {fileID: 854294232}
+  - {fileID: 443583193}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -202,6 +194,15 @@ MonoBehaviour:
   - {fileID: 1548995158}
   - {fileID: 461187367}
   - {fileID: 854294233}
+  - {fileID: 2021943844}
+  - {fileID: 241251174}
+  - {fileID: 1248984230}
+  - {fileID: 1637366782}
+  - {fileID: 1698898373}
+  - {fileID: 1348556239}
+  - {fileID: 567678892}
+  - {fileID: 146241911}
+  - {fileID: 1336164462}
 --- !u!224 &74770706 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1238885879078280046, guid: 0c196dbfe719637418ffb3aab335df2b,
@@ -318,6 +319,186 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 7356032832570523536}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &146241908
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2103286814}
+    m_Modifications:
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_Name
+      value: BloodVolumeUndo
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2750858eb97da7c47a7b7faccded589a, type: 3}
+--- !u!1 &146241909 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+    type: 3}
+  m_PrefabInstance: {fileID: 146241908}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &146241910 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+    type: 3}
+  m_PrefabInstance: {fileID: 146241908}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &146241911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146241909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b0f5ed5ea1c564eb8ff9e2ac28bdba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notes: 'Notes here are for the general use of a generic treatment system
+
+
+    TO-DO:
+
+
+    -
+    standard curves should be made
+
+
+    - Timers should start when a treatment is
+    applied and update the current value from the curves
+
+
+    -'
+  TreatmentCategory: 0
+  vitalMods:
+  - name: BloodVolume
+    vitalToMod: 7
+    StartCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EndCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    fixes_isses:
+    - name: BloodVolumeTest
+      vitalType: 7
+    WhenApplied:
+      m_PersistentCalls:
+        m_Calls: []
+    WhenFinished:
+      m_PersistentCalls:
+        m_Calls: []
+    TimeItTakes: 
+    isActive: 0
+    timeSinceTreatmentBegan: 0
+    StartTime: 0
+    CurrentValue: 0
+  doctor_manager: {fileID: 1001705311}
 --- !u!114 &192795986 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3217529581232340821, guid: 4bcc2d447590fd74492004a35138dadf,
@@ -348,30 +529,12 @@ LineRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 2974182190471979533}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &350832479 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2974182190810228050, guid: ef5f15e4309417f49bd8d0f2da00e0f7,
-    type: 3}
-  m_PrefabInstance: {fileID: 2974182190471979533}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &387090667 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2974182190454604699, guid: ef5f15e4309417f49bd8d0f2da00e0f7,
-    type: 3}
-  m_PrefabInstance: {fileID: 2974182190471979533}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &400156894
+--- !u!1001 &241251171
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 41259990}
+    m_TransformParent: {fileID: 2103286814}
     m_Modifications:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -412,6 +575,204 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_Name
+      value: DiastolicUndo
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2750858eb97da7c47a7b7faccded589a, type: 3}
+--- !u!1 &241251172 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+    type: 3}
+  m_PrefabInstance: {fileID: 241251171}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &241251173 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+    type: 3}
+  m_PrefabInstance: {fileID: 241251171}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &241251174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241251172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b0f5ed5ea1c564eb8ff9e2ac28bdba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notes: 'Notes here are for the general use of a generic treatment system
+
+
+    TO-DO:
+
+
+    -
+    standard curves should be made
+
+
+    - Timers should start when a treatment is
+    applied and update the current value from the curves
+
+
+    -'
+  TreatmentCategory: 0
+  vitalMods:
+  - name: BP_diastolic
+    vitalToMod: 1
+    StartCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EndCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    fixes_isses:
+    - name: DiastolicTest
+      vitalType: 1
+    WhenApplied:
+      m_PersistentCalls:
+        m_Calls: []
+    WhenFinished:
+      m_PersistentCalls:
+        m_Calls: []
+    TimeItTakes: 
+    isActive: 0
+    timeSinceTreatmentBegan: 0
+    StartTime: 0
+    CurrentValue: 0
+  doctor_manager: {fileID: 1001705311}
+--- !u!114 &350832479 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2974182190810228050, guid: ef5f15e4309417f49bd8d0f2da00e0f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 2974182190471979533}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &387090667 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2974182190454604699, guid: ef5f15e4309417f49bd8d0f2da00e0f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 2974182190471979533}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &400156894
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1698520966}
+    m_Modifications:
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -643,12 +1004,44 @@ MonoBehaviour:
     StartTime: 0
     CurrentValue: 0
   doctor_manager: {fileID: 1001705311}
+--- !u!1 &443583192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 443583193}
+  m_Layer: 0
+  m_Name: TestObjects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &443583193
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443583192}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1698520966}
+  - {fileID: 2103286814}
+  m_Father: {fileID: 41259990}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &461187364
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 41259990}
+    m_TransformParent: {fileID: 1698520966}
     m_Modifications:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -688,7 +1081,7 @@ PrefabInstance:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -822,6 +1215,80 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3217529581050784263}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &552035949
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2103286814}
+    m_Modifications:
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_Name
+      value: SystolicUndo
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2750858eb97da7c47a7b7faccded589a, type: 3}
 --- !u!1 &558036432 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1238885879078280045, guid: 0c196dbfe719637418ffb3aab335df2b,
@@ -840,12 +1307,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74eddb8f74f1a7a4b9986b5f32ea4c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &592079533
+--- !u!1001 &567678889
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 41259990}
+    m_TransformParent: {fileID: 2103286814}
     m_Modifications:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -886,6 +1353,186 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_Name
+      value: TemperatureUndo
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2750858eb97da7c47a7b7faccded589a, type: 3}
+--- !u!1 &567678890 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+    type: 3}
+  m_PrefabInstance: {fileID: 567678889}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &567678891 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+    type: 3}
+  m_PrefabInstance: {fileID: 567678889}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &567678892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567678890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b0f5ed5ea1c564eb8ff9e2ac28bdba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notes: 'Notes here are for the general use of a generic treatment system
+
+
+    TO-DO:
+
+
+    -
+    standard curves should be made
+
+
+    - Timers should start when a treatment is
+    applied and update the current value from the curves
+
+
+    -'
+  TreatmentCategory: 0
+  vitalMods:
+  - name: Temp
+    vitalToMod: 6
+    StartCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EndCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    fixes_isses:
+    - name: TemperatureTest
+      vitalType: 6
+    WhenApplied:
+      m_PersistentCalls:
+        m_Calls: []
+    WhenFinished:
+      m_PersistentCalls:
+        m_Calls: []
+    TimeItTakes: 
+    isActive: 0
+    timeSinceTreatmentBegan: 0
+    StartTime: 0
+    CurrentValue: 0
+  doctor_manager: {fileID: 1001705311}
+--- !u!1001 &592079533
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1698520966}
+    m_Modifications:
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -1312,7 +1959,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 41259990}
+    m_TransformParent: {fileID: 1698520966}
     m_Modifications:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -1352,7 +1999,7 @@ PrefabInstance:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -1485,7 +2132,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 41259990}
+    m_TransformParent: {fileID: 1698520966}
     m_Modifications:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -1525,7 +2172,7 @@ PrefabInstance:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -1698,7 +2345,7 @@ PrefabInstance:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -1772,7 +2419,7 @@ PrefabInstance:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -2134,7 +2781,7 @@ PrefabInstance:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -2251,7 +2898,7 @@ PrefabInstance:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -2391,6 +3038,186 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1248984227
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2103286814}
+    m_Modifications:
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_Name
+      value: HeartRateUndo
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2750858eb97da7c47a7b7faccded589a, type: 3}
+--- !u!1 &1248984228 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1248984227}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1248984229 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1248984227}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1248984230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248984228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b0f5ed5ea1c564eb8ff9e2ac28bdba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notes: 'Notes here are for the general use of a generic treatment system
+
+
+    TO-DO:
+
+
+    -
+    standard curves should be made
+
+
+    - Timers should start when a treatment is
+    applied and update the current value from the curves
+
+
+    -'
+  TreatmentCategory: 0
+  vitalMods:
+  - name: ecg
+    vitalToMod: 2
+    StartCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EndCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    fixes_isses:
+    - name: HeartRateTest
+      vitalType: 2
+    WhenApplied:
+      m_PersistentCalls:
+        m_Calls: []
+    WhenFinished:
+      m_PersistentCalls:
+        m_Calls: []
+    TimeItTakes: 
+    isActive: 0
+    timeSinceTreatmentBegan: 0
+    StartTime: 0
+    CurrentValue: 0
+  doctor_manager: {fileID: 1001705311}
 --- !u!1001 &1282488249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2436,7 +3263,7 @@ PrefabInstance:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -2483,6 +3310,186 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1336164459
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2103286814}
+    m_Modifications:
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_Name
+      value: LungVolumeUndo
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2750858eb97da7c47a7b7faccded589a, type: 3}
+--- !u!1 &1336164460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1336164459}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1336164461 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1336164459}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1336164462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336164460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b0f5ed5ea1c564eb8ff9e2ac28bdba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notes: 'Notes here are for the general use of a generic treatment system
+
+
+    TO-DO:
+
+
+    -
+    standard curves should be made
+
+
+    - Timers should start when a treatment is
+    applied and update the current value from the curves
+
+
+    -'
+  TreatmentCategory: 0
+  vitalMods:
+  - name: LungVolume
+    vitalToMod: 8
+    StartCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EndCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    fixes_isses:
+    - name: LungVolumeTest
+      vitalType: 8
+    WhenApplied:
+      m_PersistentCalls:
+        m_Calls: []
+    WhenFinished:
+      m_PersistentCalls:
+        m_Calls: []
+    TimeItTakes: 
+    isActive: 0
+    timeSinceTreatmentBegan: 0
+    StartTime: 0
+    CurrentValue: 0
+  doctor_manager: {fileID: 1001705311}
 --- !u!1 &1342935465
 GameObject:
   m_ObjectHideFlags: 0
@@ -2529,6 +3536,186 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - {fileID: 957372016}
+--- !u!1001 &1348556236
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2103286814}
+    m_Modifications:
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_Name
+      value: AwrrUndo
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2750858eb97da7c47a7b7faccded589a, type: 3}
+--- !u!1 &1348556237 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1348556236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1348556238 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1348556236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1348556239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348556237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b0f5ed5ea1c564eb8ff9e2ac28bdba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notes: 'Notes here are for the general use of a generic treatment system
+
+
+    TO-DO:
+
+
+    -
+    standard curves should be made
+
+
+    - Timers should start when a treatment is
+    applied and update the current value from the curves
+
+
+    -'
+  TreatmentCategory: 0
+  vitalMods:
+  - name: Awrr
+    vitalToMod: 5
+    StartCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EndCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    fixes_isses:
+    - name: AWRRTest
+      vitalType: 5
+    WhenApplied:
+      m_PersistentCalls:
+        m_Calls: []
+    WhenFinished:
+      m_PersistentCalls:
+        m_Calls: []
+    TimeItTakes: 
+    isActive: 0
+    timeSinceTreatmentBegan: 0
+    StartTime: 0
+    CurrentValue: 0
+  doctor_manager: {fileID: 1001705311}
 --- !u!114 &1353702770 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7356032833918739170, guid: 63a6d9d725bccb44a88ff87c5b9906bb,
@@ -2664,7 +3851,7 @@ PrefabInstance:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -2686,98 +3873,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeartRateTest
       objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2750858eb97da7c47a7b7faccded589a, type: 3}
---- !u!1 &1509756051
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1509756052}
-  - component: {fileID: 1509756053}
-  m_Layer: 0
-  m_Name: ModController
-  m_TagString: Mod
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1509756052
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1509756051}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5607158735508168363}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1509756053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1509756051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61a51d42b6777fb4f8a725f885f45bff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  notes: 
-  Patient: {fileID: 3015216117146684410}
-  Systolic:
-    useMod: 1
-    modValue: 0
-    Vital: {fileID: 2024542618}
-    mods: []
-  Diastolic:
-    useMod: 1
-    modValue: 0
-    Vital: {fileID: 2024542618}
-    mods: []
-  HeartRate:
-    useMod: 1
-    modValue: 0
-    Vital: {fileID: 2112003286}
-    mods: []
-  OxygenSaturation:
-    useMod: 1
-    modValue: 0
-    Vital: {fileID: 728101874}
-    mods: []
-  Capnography:
-    useMod: 1
-    modValue: 0
-    Vital: {fileID: 387090667}
-    mods: []
-  Awrr:
-    useMod: 1
-    modValue: 0
-    Vital: {fileID: 558036432}
-    mods: []
-  Temperature:
-    useMod: 0
-    modValue: 0
-    Vital: {fileID: 21048576}
-    mods: []
-  BloodVolume:
-    useMod: 1
-    modValue: 0
-    Vital: {fileID: 490905807}
-    mods: []
-  LungVolume:
-    useMod: 1
-    modValue: 0
-    Vital: {fileID: 7207632473552923368}
-    mods: []
 --- !u!1 &1532826516 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
@@ -2828,7 +3930,7 @@ MonoBehaviour:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 10
+        time: 30
         value: 10
         inSlope: 0
         outSlope: 0
@@ -2852,7 +3954,7 @@ MonoBehaviour:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 10
+        time: 30
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2869,7 +3971,18 @@ MonoBehaviour:
         m_Calls: []
     WhenFinished:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1532826517}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     TimeItTakes: 
     isActive: 0
     timeSinceTreatmentBegan: 0
@@ -2905,7 +4018,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 41259990}
+    m_TransformParent: {fileID: 1698520966}
     m_Modifications:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -2945,7 +4058,7 @@ PrefabInstance:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -3061,6 +4174,186 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     fixes_isses: []
+    WhenApplied:
+      m_PersistentCalls:
+        m_Calls: []
+    WhenFinished:
+      m_PersistentCalls:
+        m_Calls: []
+    TimeItTakes: 
+    isActive: 0
+    timeSinceTreatmentBegan: 0
+    StartTime: 0
+    CurrentValue: 0
+  doctor_manager: {fileID: 1001705311}
+--- !u!1001 &1637366779
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2103286814}
+    m_Modifications:
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_Name
+      value: OxygenSaturationUndo
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2750858eb97da7c47a7b7faccded589a, type: 3}
+--- !u!1 &1637366780 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1637366779}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1637366781 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1637366779}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1637366782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637366780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b0f5ed5ea1c564eb8ff9e2ac28bdba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notes: 'Notes here are for the general use of a generic treatment system
+
+
+    TO-DO:
+
+
+    -
+    standard curves should be made
+
+
+    - Timers should start when a treatment is
+    applied and update the current value from the curves
+
+
+    -'
+  TreatmentCategory: 0
+  vitalMods:
+  - name: O2
+    vitalToMod: 3
+    StartCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EndCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    fixes_isses:
+    - name: OxygenSaturationTest
+      vitalType: 3
     WhenApplied:
       m_PersistentCalls:
         m_Calls: []
@@ -3222,7 +4515,7 @@ PrefabInstance:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -3251,6 +4544,225 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2750858eb97da7c47a7b7faccded589a, type: 3}
+--- !u!1 &1698520965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1698520966}
+  m_Layer: 0
+  m_Name: Effect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1698520966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698520965}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 400156896}
+  - {fileID: 2132393939}
+  - {fileID: 2001469749}
+  - {fileID: 803285185}
+  - {fileID: 1826359184}
+  - {fileID: 592079535}
+  - {fileID: 1548995157}
+  - {fileID: 461187366}
+  - {fileID: 854294232}
+  m_Father: {fileID: 443583193}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1698898370
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2103286814}
+    m_Modifications:
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_Name
+      value: CapnographyUndo
+      objectReference: {fileID: 0}
+    - target: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2750858eb97da7c47a7b7faccded589a, type: 3}
+--- !u!1 &1698898371 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1698898370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1698898372 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1698898370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1698898373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698898371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b0f5ed5ea1c564eb8ff9e2ac28bdba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notes: 'Notes here are for the general use of a generic treatment system
+
+
+    TO-DO:
+
+
+    -
+    standard curves should be made
+
+
+    - Timers should start when a treatment is
+    applied and update the current value from the curves
+
+
+    -'
+  TreatmentCategory: 0
+  vitalMods:
+  - name: CO2
+    vitalToMod: 4
+    StartCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EndCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    fixes_isses:
+    - name: CapnographyTest
+      vitalType: 4
+    WhenApplied:
+      m_PersistentCalls:
+        m_Calls: []
+    WhenFinished:
+      m_PersistentCalls:
+        m_Calls: []
+    TimeItTakes: 
+    isActive: 0
+    timeSinceTreatmentBegan: 0
+    StartTime: 0
+    CurrentValue: 0
+  doctor_manager: {fileID: 1001705311}
 --- !u!114 &1727345862 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1238885879573153466, guid: 0c196dbfe719637418ffb3aab335df2b,
@@ -3308,7 +4820,7 @@ PrefabInstance:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -3342,7 +4854,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 41259990}
+    m_TransformParent: {fileID: 1698520966}
     m_Modifications:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -3382,7 +4894,7 @@ PrefabInstance:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -3723,7 +5235,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 41259990}
+    m_TransformParent: {fileID: 1698520966}
     m_Modifications:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -3763,7 +5275,7 @@ PrefabInstance:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -3968,6 +5480,112 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011552201}
   m_CullTransparentMesh: 0
+--- !u!1 &2021943843 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
+    type: 3}
+  m_PrefabInstance: {fileID: 552035949}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2021943844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021943843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b0f5ed5ea1c564eb8ff9e2ac28bdba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notes: 'Notes here are for the general use of a generic treatment system
+
+
+    TO-DO:
+
+
+    -
+    standard curves should be made
+
+
+    - Timers should start when a treatment is
+    applied and update the current value from the curves
+
+
+    -'
+  TreatmentCategory: 0
+  vitalMods:
+  - name: BP_systolic
+    vitalToMod: 0
+    StartCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EndCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    fixes_isses:
+    - name: SystolicTest
+      vitalType: 0
+    WhenApplied:
+      m_PersistentCalls:
+        m_Calls: []
+    WhenFinished:
+      m_PersistentCalls:
+        m_Calls: []
+    TimeItTakes: 
+    isActive: 0
+    timeSinceTreatmentBegan: 0
+    StartTime: 0
+    CurrentValue: 0
+  doctor_manager: {fileID: 1001705311}
+--- !u!4 &2021943845 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
+    type: 3}
+  m_PrefabInstance: {fileID: 552035949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2024542618 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6300869283569747478, guid: ca16e737bb46a4f408e912f5160edcb1,
@@ -4019,7 +5637,7 @@ PrefabInstance:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -4066,6 +5684,45 @@ LineRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 7356032832570523536}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2103286813
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2103286814}
+  m_Layer: 0
+  m_Name: Undo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2103286814
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103286813}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2021943845}
+  - {fileID: 241251173}
+  - {fileID: 1248984229}
+  - {fileID: 1637366781}
+  - {fileID: 1698898372}
+  - {fileID: 1348556238}
+  - {fileID: 567678891}
+  - {fileID: 146241910}
+  - {fileID: 1336164461}
+  m_Father: {fileID: 443583193}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2112003286 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7202886278702760810, guid: c60322108004eb24cb24debe410c4a05,
@@ -4077,7 +5734,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 41259990}
+    m_TransformParent: {fileID: 1698520966}
     m_Modifications:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -4117,7 +5774,7 @@ PrefabInstance:
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 70050720810270530, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
@@ -6398,7 +8055,6 @@ Transform:
   m_LocalPosition: {x: -170.42839, y: -343.08862, z: -0.58618927}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1509756052}
   - {fileID: 1532826518}
   - {fileID: 1851735619}
   - {fileID: 75571727}
@@ -7632,13 +9288,73 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5607158735508168363}
+  - component: {fileID: 8282031649167940691}
   m_Layer: 0
   m_Name: Vital mods
-  m_TagString: Untagged
+  m_TagString: Mod
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8282031649167940691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8282031649167940690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a51d42b6777fb4f8a725f885f45bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notes: 
+  Patient: {fileID: 3015216117146684410}
+  Systolic:
+    useMod: 1
+    modValue: 0
+    Vital: {fileID: 2024542618}
+    mods: []
+  Diastolic:
+    useMod: 1
+    modValue: 0
+    Vital: {fileID: 2024542618}
+    mods: []
+  HeartRate:
+    useMod: 1
+    modValue: 0
+    Vital: {fileID: 2112003286}
+    mods: []
+  OxygenSaturation:
+    useMod: 1
+    modValue: 0
+    Vital: {fileID: 728101874}
+    mods: []
+  Capnography:
+    useMod: 1
+    modValue: 0
+    Vital: {fileID: 387090667}
+    mods: []
+  Awrr:
+    useMod: 1
+    modValue: 0
+    Vital: {fileID: 558036432}
+    mods: []
+  Temperature:
+    useMod: 0
+    modValue: 0
+    Vital: {fileID: 21048576}
+    mods: []
+  BloodVolume:
+    useMod: 1
+    modValue: 0
+    Vital: {fileID: 490905807}
+    mods: []
+  LungVolume:
+    useMod: 1
+    modValue: 0
+    Vital: {fileID: 7207632473552923368}
+    mods: []
 --- !u!1001 &9126857110203959057
 PrefabInstance:
   m_ObjectHideFlags: 0
