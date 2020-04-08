@@ -19,7 +19,8 @@ public class vital_mod
         Awrr,
         Temp,
         BloodVolume,
-        LungVolume
+        LungVolume,
+        none
     };
 
     public vitalType vitalToMod;
@@ -85,7 +86,7 @@ public class Treatment : MonoBehaviour
         Airway,
         Breathing,
         Circulation,
-        Treatmetns,
+        Treatments,
         DiagnosticTest,
         PhysicalExam,
         Complete
@@ -99,6 +100,9 @@ public class Treatment : MonoBehaviour
 
     public GameObject doctor_manager;
     private GameObject active_doctor;
+
+
+    
 
     private void Start()
     {
