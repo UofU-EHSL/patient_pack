@@ -1452,7 +1452,7 @@ MonoBehaviour:
 
 
     -'
-  TreatmentCategory: 0
+  TreatmentCategory: 8
   vitalMods:
   - name: Awrr
     vitalToMod: 5
@@ -3364,6 +3364,11 @@ PrefabInstance:
       propertyPath: doctor_manager
       value: 
       objectReference: {fileID: 1001705311}
+    - target: {fileID: 1234052569363609919, guid: 0e879a6b15c0d0544b5f7a3b2703775b,
+        type: 3}
+      propertyPath: TreatmentCategory
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1286026752296617044, guid: 0e879a6b15c0d0544b5f7a3b2703775b,
         type: 3}
       propertyPath: m_Name
@@ -4001,6 +4006,11 @@ PrefabInstance:
       propertyPath: doctor_manager
       value: 
       objectReference: {fileID: 1001705311}
+    - target: {fileID: 1951072837501007991, guid: b4879c8f394baea4e98045b01c22d643,
+        type: 3}
+      propertyPath: TreatmentCategory
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2011777159647905586, guid: b4879c8f394baea4e98045b01c22d643,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6106,6 +6116,11 @@ PrefabInstance:
       propertyPath: doctor_manager
       value: 
       objectReference: {fileID: 1001705311}
+    - target: {fileID: 3685391007268998016, guid: 2b090d6310cf8bf42aa24dc5230114f9,
+        type: 3}
+      propertyPath: TreatmentCategory
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3737421829792855238, guid: 2b090d6310cf8bf42aa24dc5230114f9,
         type: 3}
       propertyPath: m_Name
@@ -6827,6 +6842,11 @@ PrefabInstance:
       propertyPath: doctor_manager
       value: 
       objectReference: {fileID: 1001705311}
+    - target: {fileID: 5316584105143345970, guid: 11ff9fea68072cb4dbbbdfdac9c483ec,
+        type: 3}
+      propertyPath: TreatmentCategory
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11ff9fea68072cb4dbbbdfdac9c483ec, type: 3}
 --- !u!114 &5418714616850171279 stripped

@@ -89,7 +89,8 @@ public class Treatment : MonoBehaviour
         Treatments,
         DiagnosticTest,
         PhysicalExam,
-        Complete
+        Complete,
+        Condition
     };
 
     [TextArea(15, 20)]
