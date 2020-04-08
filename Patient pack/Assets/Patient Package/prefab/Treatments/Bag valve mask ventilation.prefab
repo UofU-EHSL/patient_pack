@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notes: 
-  TreatmentCategory: 0
+  TreatmentCategory: 1
   vitalMods: []
   doctor_manager: {fileID: 0}

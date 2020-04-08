@@ -44,6 +44,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notes: 
-  TreatmentCategory: 0
-  vitalMods: []
+  TreatmentCategory: 6
+  vitalMods:
+  - name: none
+    vitalToMod: 9
+    StartCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+    EndCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+    fixes_isses: []
+    WhenApplied:
+      m_PersistentCalls:
+        m_Calls: []
+    WhenFinished:
+      m_PersistentCalls:
+        m_Calls: []
+    TimeItTakes: 
+    isActive: 0
+    timeSinceTreatmentBegan: 0
+    StartTime: 0
+    CurrentValue: 0
   doctor_manager: {fileID: 0}
