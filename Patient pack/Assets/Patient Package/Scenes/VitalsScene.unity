@@ -4562,8 +4562,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2890438862148174614, guid: ab61c708e4bd7b84189ee2a16be53356,
         type: 3}
+      propertyPath: vitalMods.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2890438862148174614, guid: ab61c708e4bd7b84189ee2a16be53356,
+        type: 3}
       propertyPath: TreatmentCategory
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2890438862148174614, guid: ab61c708e4bd7b84189ee2a16be53356,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].name
+      value: BP_systolic
+      objectReference: {fileID: 0}
+    - target: {fileID: 2890438862148174614, guid: ab61c708e4bd7b84189ee2a16be53356,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].vitalToMod
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2890438862148174615, guid: ab61c708e4bd7b84189ee2a16be53356,
         type: 3}
@@ -5950,8 +5965,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3661106470310573368, guid: 9ed281b7eef2cf84da2877c679bda8fe,
         type: 3}
+      propertyPath: vitalMods.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661106470310573368, guid: 9ed281b7eef2cf84da2877c679bda8fe,
+        type: 3}
       propertyPath: TreatmentCategory
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661106470310573368, guid: 9ed281b7eef2cf84da2877c679bda8fe,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].name
+      value: BP_systolic
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661106470310573368, guid: 9ed281b7eef2cf84da2877c679bda8fe,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].vitalToMod
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3661106470310573369, guid: 9ed281b7eef2cf84da2877c679bda8fe,
         type: 3}
@@ -6464,8 +6494,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4967860120103814572, guid: 7c653792134de2e409d0ed22b4c9b224,
         type: 3}
+      propertyPath: vitalMods.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967860120103814572, guid: 7c653792134de2e409d0ed22b4c9b224,
+        type: 3}
       propertyPath: TreatmentCategory
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967860120103814572, guid: 7c653792134de2e409d0ed22b4c9b224,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].name
+      value: BP_systolic
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967860120103814572, guid: 7c653792134de2e409d0ed22b4c9b224,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].vitalToMod
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4967860120103814573, guid: 7c653792134de2e409d0ed22b4c9b224,
         type: 3}
@@ -6930,8 +6975,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5460629353483355855, guid: d5201711f62cd014abebda7cbd753a42,
         type: 3}
+      propertyPath: vitalMods.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5460629353483355855, guid: d5201711f62cd014abebda7cbd753a42,
+        type: 3}
       propertyPath: TreatmentCategory
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5460629353483355855, guid: d5201711f62cd014abebda7cbd753a42,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].name
+      value: BP_systolic
+      objectReference: {fileID: 0}
+    - target: {fileID: 5460629353483355855, guid: d5201711f62cd014abebda7cbd753a42,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].vitalToMod
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5201711f62cd014abebda7cbd753a42, type: 3}
@@ -7028,8 +7088,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5760983228205278957, guid: 35e72b28e516a064399a7c6f09c725ba,
         type: 3}
+      propertyPath: vitalMods.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760983228205278957, guid: 35e72b28e516a064399a7c6f09c725ba,
+        type: 3}
       propertyPath: TreatmentCategory
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760983228205278957, guid: 35e72b28e516a064399a7c6f09c725ba,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].name
+      value: BP_systolic
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760983228205278957, guid: 35e72b28e516a064399a7c6f09c725ba,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].vitalToMod
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35e72b28e516a064399a7c6f09c725ba, type: 3}
@@ -7102,8 +7177,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5780663733515712439, guid: 153098b856734874bb9920ae500205c4,
         type: 3}
+      propertyPath: vitalMods.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780663733515712439, guid: 153098b856734874bb9920ae500205c4,
+        type: 3}
       propertyPath: TreatmentCategory
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780663733515712439, guid: 153098b856734874bb9920ae500205c4,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].name
+      value: BP_systolic
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780663733515712439, guid: 153098b856734874bb9920ae500205c4,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].vitalToMod
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 153098b856734874bb9920ae500205c4, type: 3}
@@ -7190,8 +7280,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6149782539483026890, guid: 3baa0b41f46102547ac07a9bb1b95021,
         type: 3}
+      propertyPath: vitalMods.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149782539483026890, guid: 3baa0b41f46102547ac07a9bb1b95021,
+        type: 3}
       propertyPath: TreatmentCategory
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149782539483026890, guid: 3baa0b41f46102547ac07a9bb1b95021,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].name
+      value: BP_systolic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149782539483026890, guid: 3baa0b41f46102547ac07a9bb1b95021,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].vitalToMod
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6149782539483026891, guid: 3baa0b41f46102547ac07a9bb1b95021,
         type: 3}
@@ -7849,8 +7954,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6884221966509070423, guid: 7d25580d30293bc49b27f6d76934ace6,
         type: 3}
+      propertyPath: vitalMods.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6884221966509070423, guid: 7d25580d30293bc49b27f6d76934ace6,
+        type: 3}
       propertyPath: TreatmentCategory
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6884221966509070423, guid: 7d25580d30293bc49b27f6d76934ace6,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].name
+      value: BP_systolic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6884221966509070423, guid: 7d25580d30293bc49b27f6d76934ace6,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].vitalToMod
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d25580d30293bc49b27f6d76934ace6, type: 3}
@@ -9070,8 +9190,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7543895547729651750, guid: 0957f953622360a42a4a65891518c03b,
         type: 3}
+      propertyPath: vitalMods.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7543895547729651750, guid: 0957f953622360a42a4a65891518c03b,
+        type: 3}
       propertyPath: TreatmentCategory
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7543895547729651750, guid: 0957f953622360a42a4a65891518c03b,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].name
+      value: BP_systolic
+      objectReference: {fileID: 0}
+    - target: {fileID: 7543895547729651750, guid: 0957f953622360a42a4a65891518c03b,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].vitalToMod
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7543895547729651751, guid: 0957f953622360a42a4a65891518c03b,
         type: 3}
@@ -9637,8 +9772,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8871235508560273724, guid: 2a489e135778d9c4fa6a36c61be77052,
         type: 3}
+      propertyPath: vitalMods.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8871235508560273724, guid: 2a489e135778d9c4fa6a36c61be77052,
+        type: 3}
       propertyPath: TreatmentCategory
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8871235508560273724, guid: 2a489e135778d9c4fa6a36c61be77052,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].name
+      value: BP_systolic
+      objectReference: {fileID: 0}
+    - target: {fileID: 8871235508560273724, guid: 2a489e135778d9c4fa6a36c61be77052,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].vitalToMod
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8871235508560273725, guid: 2a489e135778d9c4fa6a36c61be77052,
         type: 3}
