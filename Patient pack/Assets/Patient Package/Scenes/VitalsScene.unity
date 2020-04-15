@@ -1409,7 +1409,7 @@ PrefabInstance:
     - target: {fileID: 70050720810270531, guid: 2750858eb97da7c47a7b7faccded589a,
         type: 3}
       propertyPath: m_Name
-      value: UnstableAirway
+      value: Unstable Airway
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2750858eb97da7c47a7b7faccded589a, type: 3}
@@ -3117,6 +3117,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 692163483122873037, guid: 45d05f036b0927746a9bec18f90edb35,
+        type: 3}
+      propertyPath: vitalMods.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 692163483122873037, guid: 45d05f036b0927746a9bec18f90edb35,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45d05f036b0927746a9bec18f90edb35, type: 3}
 --- !u!1001 &812328803141229804
@@ -4075,6 +4085,116 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 41259990}
     m_Modifications:
+    - target: {fileID: 2077019979240172954, guid: 95fc60b6671aac44299e31e4cd5b21f7,
+        type: 3}
+      propertyPath: vitalMods.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077019979240172954, guid: 95fc60b6671aac44299e31e4cd5b21f7,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].fixes_isses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077019979240172954, guid: 95fc60b6671aac44299e31e4cd5b21f7,
+        type: 3}
+      propertyPath: vitalMods.Array.data[1].fixes_isses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077019979240172954, guid: 95fc60b6671aac44299e31e4cd5b21f7,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].fixes_isses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077019979240172954, guid: 95fc60b6671aac44299e31e4cd5b21f7,
+        type: 3}
+      propertyPath: vitalMods.Array.data[3].fixes_isses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077019979240172954, guid: 95fc60b6671aac44299e31e4cd5b21f7,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
+    - target: {fileID: 2077019979240172954, guid: 95fc60b6671aac44299e31e4cd5b21f7,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].name
+      value: O2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077019979240172954, guid: 95fc60b6671aac44299e31e4cd5b21f7,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].vitalToMod
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077019979240172954, guid: 95fc60b6671aac44299e31e4cd5b21f7,
+        type: 3}
+      propertyPath: vitalMods.Array.data[1].name
+      value: CO2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077019979240172954, guid: 95fc60b6671aac44299e31e4cd5b21f7,
+        type: 3}
+      propertyPath: vitalMods.Array.data[1].vitalToMod
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077019979240172954, guid: 95fc60b6671aac44299e31e4cd5b21f7,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].name
+      value: ecg
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077019979240172954, guid: 95fc60b6671aac44299e31e4cd5b21f7,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].vitalToMod
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077019979240172954, guid: 95fc60b6671aac44299e31e4cd5b21f7,
+        type: 3}
+      propertyPath: vitalMods.Array.data[3].name
+      value: Awrr
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077019979240172954, guid: 95fc60b6671aac44299e31e4cd5b21f7,
+        type: 3}
+      propertyPath: vitalMods.Array.data[3].vitalToMod
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077019979240172954, guid: 95fc60b6671aac44299e31e4cd5b21f7,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].fixes_isses.Array.data[0].name
+      value: Unstable Airway
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077019979240172954, guid: 95fc60b6671aac44299e31e4cd5b21f7,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].fixes_isses.Array.data[0].vitalType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077019979240172954, guid: 95fc60b6671aac44299e31e4cd5b21f7,
+        type: 3}
+      propertyPath: vitalMods.Array.data[1].fixes_isses.Array.data[0].name
+      value: Unstable Airway
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077019979240172954, guid: 95fc60b6671aac44299e31e4cd5b21f7,
+        type: 3}
+      propertyPath: vitalMods.Array.data[1].fixes_isses.Array.data[0].vitalType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077019979240172954, guid: 95fc60b6671aac44299e31e4cd5b21f7,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].fixes_isses.Array.data[0].name
+      value: Unstable Airway
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077019979240172954, guid: 95fc60b6671aac44299e31e4cd5b21f7,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].fixes_isses.Array.data[0].vitalType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077019979240172954, guid: 95fc60b6671aac44299e31e4cd5b21f7,
+        type: 3}
+      propertyPath: vitalMods.Array.data[3].fixes_isses.Array.data[0].name
+      value: Unstable Airway
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077019979240172954, guid: 95fc60b6671aac44299e31e4cd5b21f7,
+        type: 3}
+      propertyPath: vitalMods.Array.data[3].fixes_isses.Array.data[0].vitalType
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2077019979240172955, guid: 95fc60b6671aac44299e31e4cd5b21f7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4199,6 +4319,106 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2080275662474136520, guid: 84c969a7fdf288243bb70bfd73d0ed76,
+        type: 3}
+      propertyPath: vitalMods.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080275662474136520, guid: 84c969a7fdf288243bb70bfd73d0ed76,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].fixes_isses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080275662474136520, guid: 84c969a7fdf288243bb70bfd73d0ed76,
+        type: 3}
+      propertyPath: vitalMods.Array.data[1].fixes_isses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080275662474136520, guid: 84c969a7fdf288243bb70bfd73d0ed76,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].fixes_isses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080275662474136520, guid: 84c969a7fdf288243bb70bfd73d0ed76,
+        type: 3}
+      propertyPath: vitalMods.Array.data[3].fixes_isses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080275662474136520, guid: 84c969a7fdf288243bb70bfd73d0ed76,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
+    - target: {fileID: 2080275662474136520, guid: 84c969a7fdf288243bb70bfd73d0ed76,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].name
+      value: BP_systolic
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080275662474136520, guid: 84c969a7fdf288243bb70bfd73d0ed76,
+        type: 3}
+      propertyPath: vitalMods.Array.data[1].name
+      value: BP_diastolic
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080275662474136520, guid: 84c969a7fdf288243bb70bfd73d0ed76,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].name
+      value: O2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080275662474136520, guid: 84c969a7fdf288243bb70bfd73d0ed76,
+        type: 3}
+      propertyPath: vitalMods.Array.data[3].name
+      value: ecg
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080275662474136520, guid: 84c969a7fdf288243bb70bfd73d0ed76,
+        type: 3}
+      propertyPath: vitalMods.Array.data[1].vitalToMod
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080275662474136520, guid: 84c969a7fdf288243bb70bfd73d0ed76,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].vitalToMod
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080275662474136520, guid: 84c969a7fdf288243bb70bfd73d0ed76,
+        type: 3}
+      propertyPath: vitalMods.Array.data[3].vitalToMod
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080275662474136520, guid: 84c969a7fdf288243bb70bfd73d0ed76,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].fixes_isses.Array.data[0].name
+      value: Hemothorax
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080275662474136520, guid: 84c969a7fdf288243bb70bfd73d0ed76,
+        type: 3}
+      propertyPath: vitalMods.Array.data[1].fixes_isses.Array.data[0].vitalType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080275662474136520, guid: 84c969a7fdf288243bb70bfd73d0ed76,
+        type: 3}
+      propertyPath: vitalMods.Array.data[1].fixes_isses.Array.data[0].name
+      value: Hemothorax
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080275662474136520, guid: 84c969a7fdf288243bb70bfd73d0ed76,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].fixes_isses.Array.data[0].vitalType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080275662474136520, guid: 84c969a7fdf288243bb70bfd73d0ed76,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].fixes_isses.Array.data[0].name
+      value: Hemothorax
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080275662474136520, guid: 84c969a7fdf288243bb70bfd73d0ed76,
+        type: 3}
+      propertyPath: vitalMods.Array.data[3].fixes_isses.Array.data[0].vitalType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080275662474136520, guid: 84c969a7fdf288243bb70bfd73d0ed76,
+        type: 3}
+      propertyPath: vitalMods.Array.data[3].fixes_isses.Array.data[0].name
+      value: Hemothorax
+      objectReference: {fileID: 0}
     - target: {fileID: 2080275662474136521, guid: 84c969a7fdf288243bb70bfd73d0ed76,
         type: 3}
       propertyPath: m_Name
@@ -4268,6 +4488,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2102302231946467478, guid: ce4c99c885c09a3469bb62dd32c2ff90,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     - target: {fileID: 2102302231946467479, guid: ce4c99c885c09a3469bb62dd32c2ff90,
         type: 3}
       propertyPath: m_Name
@@ -4337,6 +4562,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2428016868989661094, guid: 7e9578a772b6de74a86f333b0885457b,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     - target: {fileID: 2428016868989661095, guid: 7e9578a772b6de74a86f333b0885457b,
         type: 3}
       propertyPath: m_Name
@@ -4436,6 +4666,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Place leads
       objectReference: {fileID: 0}
+    - target: {fileID: 2803289123184689554, guid: e7ef79c8d57059c4080e6827a9a02812,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     - target: {fileID: 2803289123184689555, guid: e7ef79c8d57059c4080e6827a9a02812,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4505,6 +4740,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Breath sound assessment
       objectReference: {fileID: 0}
+    - target: {fileID: 2890438862148174614, guid: ab61c708e4bd7b84189ee2a16be53356,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     - target: {fileID: 2890438862148174615, guid: ab61c708e4bd7b84189ee2a16be53356,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4703,6 +4943,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2929055152421965935, guid: 6187d5ac558ee584a80e532234684c2d,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6187d5ac558ee584a80e532234684c2d, type: 3}
 --- !u!1001 &2974182190471979533
@@ -5868,6 +6113,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 41259990}
     m_Modifications:
+    - target: {fileID: 3661106470310573368, guid: 9ed281b7eef2cf84da2877c679bda8fe,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     - target: {fileID: 3661106470310573369, guid: 9ed281b7eef2cf84da2877c679bda8fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5937,6 +6187,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 41259990}
     m_Modifications:
+    - target: {fileID: 3669146052082467756, guid: 173148c9f5f6a6f4690c8607eb14cb1a,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     - target: {fileID: 3669146052082467757, guid: 173148c9f5f6a6f4690c8607eb14cb1a,
         type: 3}
       propertyPath: m_Name
@@ -6145,6 +6400,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3725676318079184679, guid: 47c895bb91043db4f8086a1a430c8200,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47c895bb91043db4f8086a1a430c8200, type: 3}
 --- !u!1001 &4506079198371166007
@@ -6352,6 +6612,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4967860120103814572, guid: 7c653792134de2e409d0ed22b4c9b224,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     - target: {fileID: 4967860120103814573, guid: 7c653792134de2e409d0ed22b4c9b224,
         type: 3}
       propertyPath: m_Name
@@ -6371,6 +6636,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pelvic binder
       objectReference: {fileID: 0}
+    - target: {fileID: 4969127760409858725, guid: f6efd4511b7e233418e8646cb1f1d5f4,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     - target: {fileID: 4969127760409858726, guid: f6efd4511b7e233418e8646cb1f1d5f4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6569,6 +6839,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5292627007932842719, guid: 37f4298d3b1bfd348ad1e74fcc46dbe6,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37f4298d3b1bfd348ad1e74fcc46dbe6, type: 3}
 --- !u!1001 &5305370645528601610
@@ -6803,6 +7078,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5460629353483355855, guid: d5201711f62cd014abebda7cbd753a42,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5201711f62cd014abebda7cbd753a42, type: 3}
 --- !u!4 &5607158735508168363
@@ -6896,6 +7176,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trauma labs
       objectReference: {fileID: 0}
+    - target: {fileID: 5760983228205278957, guid: 35e72b28e516a064399a7c6f09c725ba,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35e72b28e516a064399a7c6f09c725ba, type: 3}
 --- !u!1001 &5780663734154973691
@@ -6965,6 +7250,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5780663733515712439, guid: 153098b856734874bb9920ae500205c4,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 153098b856734874bb9920ae500205c4, type: 3}
 --- !u!1001 &6063690466813366192
@@ -7048,6 +7338,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 41259990}
     m_Modifications:
+    - target: {fileID: 6149782539483026890, guid: 3baa0b41f46102547ac07a9bb1b95021,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     - target: {fileID: 6149782539483026891, guid: 3baa0b41f46102547ac07a9bb1b95021,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7246,6 +7541,176 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].StartCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[1].StartCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].StartCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].WhenApplied.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].fixes_isses.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].fixes_isses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].name
+      value: BP_systolic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[1].name
+      value: BP_diastolic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[1].vitalToMod
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].StartCurve.m_Curve.Array.data[1].time
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].StartCurve.m_Curve.Array.data[1].value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].StartCurve.m_PreInfinity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].StartCurve.m_PostInfinity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[1].StartCurve.m_Curve.Array.data[1].time
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[1].StartCurve.m_Curve.Array.data[1].value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[1].StartCurve.m_PreInfinity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[1].StartCurve.m_PostInfinity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].name
+      value: BloodVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].vitalToMod
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].StartCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].StartCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].StartCurve.m_PreInfinity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].StartCurve.m_PostInfinity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].StartCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].StartCurve.m_Curve.Array.data[0].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].StartCurve.m_Curve.Array.data[1].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].WhenApplied.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].WhenApplied.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].WhenApplied.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].WhenApplied.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].fixes_isses.Array.data[0].vitalType
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330790304734556365, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].fixes_isses.Array.data[0].vitalType
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6330790304734556366, guid: a9c0dda04b308e44ba4cd707abb2b9bd,
         type: 3}
       propertyPath: m_Name
@@ -7315,6 +7780,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6377427398066441825, guid: 4d9da1f1358cec74ab0556ce7b886271,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     - target: {fileID: 6377427398066441830, guid: 4d9da1f1358cec74ab0556ce7b886271,
         type: 3}
       propertyPath: m_Name
@@ -7532,6 +8002,116 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6678415297980954033, guid: e47d0d746f023a046a7c9780e961f6e5,
+        type: 3}
+      propertyPath: vitalMods.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678415297980954033, guid: e47d0d746f023a046a7c9780e961f6e5,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].fixes_isses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678415297980954033, guid: e47d0d746f023a046a7c9780e961f6e5,
+        type: 3}
+      propertyPath: vitalMods.Array.data[1].fixes_isses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678415297980954033, guid: e47d0d746f023a046a7c9780e961f6e5,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].fixes_isses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678415297980954033, guid: e47d0d746f023a046a7c9780e961f6e5,
+        type: 3}
+      propertyPath: vitalMods.Array.data[3].fixes_isses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678415297980954033, guid: e47d0d746f023a046a7c9780e961f6e5,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
+    - target: {fileID: 6678415297980954033, guid: e47d0d746f023a046a7c9780e961f6e5,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].name
+      value: O2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678415297980954033, guid: e47d0d746f023a046a7c9780e961f6e5,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].vitalToMod
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678415297980954033, guid: e47d0d746f023a046a7c9780e961f6e5,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].fixes_isses.Array.data[0].name
+      value: Unstable Airway
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678415297980954033, guid: e47d0d746f023a046a7c9780e961f6e5,
+        type: 3}
+      propertyPath: vitalMods.Array.data[0].fixes_isses.Array.data[0].vitalType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678415297980954033, guid: e47d0d746f023a046a7c9780e961f6e5,
+        type: 3}
+      propertyPath: vitalMods.Array.data[1].name
+      value: CO2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678415297980954033, guid: e47d0d746f023a046a7c9780e961f6e5,
+        type: 3}
+      propertyPath: vitalMods.Array.data[1].vitalToMod
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678415297980954033, guid: e47d0d746f023a046a7c9780e961f6e5,
+        type: 3}
+      propertyPath: vitalMods.Array.data[1].fixes_isses.Array.data[0].name
+      value: Unstable Airway
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678415297980954033, guid: e47d0d746f023a046a7c9780e961f6e5,
+        type: 3}
+      propertyPath: vitalMods.Array.data[1].fixes_isses.Array.data[0].vitalType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678415297980954033, guid: e47d0d746f023a046a7c9780e961f6e5,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].name
+      value: ecg
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678415297980954033, guid: e47d0d746f023a046a7c9780e961f6e5,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].vitalToMod
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678415297980954033, guid: e47d0d746f023a046a7c9780e961f6e5,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].fixes_isses.Array.data[0].name
+      value: Unstable Airway
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678415297980954033, guid: e47d0d746f023a046a7c9780e961f6e5,
+        type: 3}
+      propertyPath: vitalMods.Array.data[2].fixes_isses.Array.data[0].vitalType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678415297980954033, guid: e47d0d746f023a046a7c9780e961f6e5,
+        type: 3}
+      propertyPath: vitalMods.Array.data[3].name
+      value: Awrr
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678415297980954033, guid: e47d0d746f023a046a7c9780e961f6e5,
+        type: 3}
+      propertyPath: vitalMods.Array.data[3].vitalToMod
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678415297980954033, guid: e47d0d746f023a046a7c9780e961f6e5,
+        type: 3}
+      propertyPath: vitalMods.Array.data[3].fixes_isses.Array.data[0].name
+      value: Unstable Airway
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678415297980954033, guid: e47d0d746f023a046a7c9780e961f6e5,
+        type: 3}
+      propertyPath: vitalMods.Array.data[3].fixes_isses.Array.data[0].vitalType
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6678415297980954038, guid: e47d0d746f023a046a7c9780e961f6e5,
         type: 3}
       propertyPath: m_Name
@@ -7687,6 +8267,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pelvic X-Ray
       objectReference: {fileID: 0}
+    - target: {fileID: 6884221966509070423, guid: 7d25580d30293bc49b27f6d76934ace6,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d25580d30293bc49b27f6d76934ace6, type: 3}
 --- !u!1001 &6951178460936973583
@@ -8640,6 +9225,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7008716266146562054, guid: 37d89c3bfa372004e87a575ba8c2886c,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     - target: {fileID: 7008716266146562055, guid: 37d89c3bfa372004e87a575ba8c2886c,
         type: 3}
       propertyPath: m_Name
@@ -8883,6 +9473,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Physical exam
       objectReference: {fileID: 0}
+    - target: {fileID: 7543895547729651750, guid: 0957f953622360a42a4a65891518c03b,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     - target: {fileID: 7543895547729651751, guid: 0957f953622360a42a4a65891518c03b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8952,6 +9547,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Capnography
       objectReference: {fileID: 0}
+    - target: {fileID: 7873928212501136414, guid: 227e3716929d66847b09f508c883a8cd,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     - target: {fileID: 7873928212501136415, guid: 227e3716929d66847b09f508c883a8cd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9109,6 +9709,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Take to OR
       objectReference: {fileID: 0}
+    - target: {fileID: 8385081091350734716, guid: 2c7881574bf33af42a67f258804ca8b4,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     - target: {fileID: 8385081091350734717, guid: 2c7881574bf33af42a67f258804ca8b4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9331,6 +9936,11 @@ PrefabInstance:
       propertyPath: vitalMods.Array.data[0].WhenApplied.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8709174729520237136, guid: ed9af876dbfbcf24f90b6119c28de597,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     - target: {fileID: 8709174729520237137, guid: ed9af876dbfbcf24f90b6119c28de597,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9389,7 +9999,7 @@ PrefabInstance:
     - target: {fileID: 8709174729520237143, guid: ed9af876dbfbcf24f90b6119c28de597,
         type: 3}
       propertyPath: m_Name
-      value: Remove clostes
+      value: Remove clothes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed9af876dbfbcf24f90b6119c28de597, type: 3}
@@ -9400,6 +10010,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 41259990}
     m_Modifications:
+    - target: {fileID: 8871235508560273724, guid: 2a489e135778d9c4fa6a36c61be77052,
+        type: 3}
+      propertyPath: doctor_manager
+      value: 
+      objectReference: {fileID: 1001705311}
     - target: {fileID: 8871235508560273725, guid: 2a489e135778d9c4fa6a36c61be77052,
         type: 3}
       propertyPath: m_Name
