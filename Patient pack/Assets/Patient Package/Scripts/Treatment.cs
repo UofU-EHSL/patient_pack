@@ -102,13 +102,21 @@ public class Treatment : MonoBehaviour
     public GameObject doctor_manager;
     private GameObject active_doctor;
 
+    private AudioSource audioClip;
+    [TextArea(15, 20)]
+    public string audioCaption;
 
-    
+
+
 
     private void Start()
     {
         if (gameObject.transform.parent.name == "Vital mods")
         {
+            if (this.gameObject.GetComponent<AudioSource>())
+            {
+                audioClip = this.gameObject.GetComponent<AudioSource>();
+            }
             VitalMods mods = GameObject.FindGameObjectWithTag("Mod").GetComponent<VitalMods>();
             mods.AddTreatment(this);
             foreach (vital_mod vm in vitalMods)
