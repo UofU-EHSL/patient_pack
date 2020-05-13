@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 [System.Serializable]
 public class vital
 {
     public Color color;
     public LineRenderer line_renderer;
     public patient_line_renderer custom_line_renderer;
-    public Text[] text_items;
+    public TextMeshProUGUI[] text_items;
 }
 
 [System.Serializable]
@@ -35,7 +35,7 @@ public class patient : MonoBehaviour
             single.line_renderer.endColor = single.color;
             single.line_renderer.startColor = single.color;
             single.custom_line_renderer.color = single.color;
-            foreach (Text one in single.text_items)
+            foreach (TextMeshProUGUI one in single.text_items)
             {
                 one.color = single.color;
             }

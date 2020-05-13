@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using TMPro;
 
 public class blood_volume : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class blood_volume : MonoBehaviour
     [HideInInspector]
     public float StartingVolume;
     public float volume;
-    public Text text;
+    public TextMeshProUGUI text;
     public int max;
     public UnityEvent maxEvent;
     public int min;

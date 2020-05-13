@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
-
+using TMPro;
 public class oxygen_saturation : MonoBehaviour
 {
     [TextArea(15, 20)]
@@ -11,7 +11,7 @@ public class oxygen_saturation : MonoBehaviour
     [HideInInspector]
     public float StartingOxygentSaturation;
     public float OxygenSaturation;
-    public Text text;
+    public TextMeshProUGUI text;
     public int o2MinValue;
     public UnityEvent o2Min;
     public int o2MaxValue;

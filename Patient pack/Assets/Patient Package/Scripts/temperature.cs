@@ -4,6 +4,7 @@ using UnityEngine;
 
 using UnityEngine.UI;
 using UnityEngine.Events;
+using TMPro;
 
 public class temperature : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class temperature : MonoBehaviour
     [HideInInspector]
     public float StartingTemp;
     public float temp;
-    public Text text;
+    public TextMeshProUGUI text;
     public int max;
     public UnityEvent maxEvent;
     public int min;
