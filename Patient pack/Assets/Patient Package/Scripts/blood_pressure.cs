@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using TMPro;
 public class blood_pressure : MonoBehaviour
 {
     [TextArea(15, 20)]
@@ -27,7 +28,7 @@ public class blood_pressure : MonoBehaviour
     public float StartingDiastolic;
 
     [Header("MEAN")]
-    public Text mean;
+    public TextMeshProUGUI mean;
     public int meanMinValue;
     public UnityEvent meanMin;
     public int meanMaxValue;

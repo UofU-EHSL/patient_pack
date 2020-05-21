@@ -4,6 +4,7 @@ using UnityEngine;
 
 using UnityEngine.UI;
 using UnityEngine.Events;
+using TMPro;
 
 public class airway_respiratory_rate : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class airway_respiratory_rate : MonoBehaviour
     [HideInInspector]
     public float StartingBreathsPerMinute;
     public float BreathsPerMinute;
-    public Text text;
+    public TextMeshProUGUI text;
     public int max;
     public UnityEvent maxEvent;
     public int min;

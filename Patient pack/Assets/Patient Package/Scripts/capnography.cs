@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
-
+using TMPro;
 public class capnography : MonoBehaviour
 {
     [TextArea(15, 20)]
@@ -26,7 +26,7 @@ public class capnography : MonoBehaviour
     //line rendered for making the real readout
     public patient_line_renderer line_renderer;
     public AnimationCurve co2_line;
-    public Text digital_readout;
+    public TextMeshProUGUI digital_readout;
     public airway_respiratory_rate awrr;
 
 

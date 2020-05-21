@@ -146,6 +146,10 @@ public class patient_line_renderer : MonoBehaviour
     // Append data to the line
     public void AddPoint(float t, float val)
     {
+        if (lineRenderer== null)
+        {
+            return;
+        }
         // Add a point on the left
         lineRenderer.positionCount++;
 

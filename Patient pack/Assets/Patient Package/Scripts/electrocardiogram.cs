@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using TMPro;
 
 public class electrocardiogram : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class electrocardiogram : MonoBehaviour
     public string notes;
 
     [Header("ECG")]
-    public Text bpmText;
+    public TextMeshProUGUI bpmText;
     public int bpmMinValue;
     public UnityEvent bpmMin;
     public int bpmMaxValue;
