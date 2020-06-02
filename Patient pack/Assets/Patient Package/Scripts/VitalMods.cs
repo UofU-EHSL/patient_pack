@@ -181,8 +181,8 @@ public class VitalMods : MonoBehaviour
             {
                 LungVolume.modValue += vm.CurrentValue;
             }
-            lung_volume vitalScript = LungVolume.Vital.GetComponent<lung_volume>();
-            vitalScript.volume = vitalScript.StartingVolume + LungVolume.modValue;
+            //lung_volume vitalScript = LungVolume.Vital.GetComponent<lung_volume>();
+            //vitalScript.volume = vitalScript.StartingVolume + LungVolume.modValue;
         }
 
         if (Temperature.useMod)
