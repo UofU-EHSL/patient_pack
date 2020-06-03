@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
+using System;
+
 public class oxygen_saturation : MonoBehaviour
 {
     [TextArea(15, 20)]
@@ -30,13 +32,29 @@ public class oxygen_saturation : MonoBehaviour
     private float active_time;
     public airway_respiratory_rate awrr;
 
+    [Header("DEATH")]
+    public bool Death;
+    public Vector2 DeathValue;
+    public float DeathTime;
+    public UnityEvent death;
+
     private void Start()
     {
         StartingOxygentSaturation = OxygenSaturation;
     }
     void FixedUpdate()
     {
-
+        if (Death)
+        {
+            if (OxygenSaturation <= DeathValue.x || OxygenSaturation >= DeathValue.y)
+            {
+                DeathTime -= Time.deltaTime;
+            }
+        }
+        if (DeathTime <= 0)
+        {
+            death.Invoke();
+        }
 
         if (OxygenSaturation >= o2MinValue)
         {
@@ -47,7 +65,13 @@ public class oxygen_saturation : MonoBehaviour
             keys[3].value = (OxygenSaturation / 10) * .4f;
             keys[4].value = 0;
             keys[5].value = 0;
-            keys[5].time = 60 / awrr.BreathsPerMinute;
+            if (awrr.BreathsPerMinute > 0)
+            {
+                keys[5].time = 60 / awrr.BreathsPerMinute;
+
+            }
+
+
 
             spo2_line.keys = keys;
         }
@@ -55,10 +79,15 @@ public class oxygen_saturation : MonoBehaviour
         {
             Keyframe[] keys = spo2_line.keys; // Get a copy of the array
             keys[0].value = 0;
+            keys[0].time = 0;
             keys[1].value = 0;
+            keys[1].time = 0.78f;
             keys[2].value = 0;
+            keys[2].time = 1.5f;
             keys[3].value = 0;
+            keys[3].time = 2;
             keys[4].value = 0;
+            keys[4].time = 4;
             keys[5].value = 0;
             keys[5].time = 5;
 
@@ -89,7 +118,8 @@ public class oxygen_saturation : MonoBehaviour
             }
             else
             {
-                nextActionTime += 60 / awrr.BreathsPerMinute;
+                nextActionTime += Math.Min(awrr.BreathsPerMinute, 60 / awrr.BreathsPerMinute);
+
                 active = true;
             }
         }

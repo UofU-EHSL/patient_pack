@@ -52,16 +52,65 @@ public class electrocardiogram : MonoBehaviour
     public float TWave;
     public float temp_wait;
 
+    public AudioClip beat;
+    public AudioClip flatLine;
+    public AudioSource source;
+    private float waitTime;
+    private float previousTime;
+
     public float BeatsPerMinute = 60;
     public float StartingBeatsPerMinute;
 
+    [Header("DEATH")]
+    public bool Death;
+    public Vector2 DeathValue;
+    public float DeathTime;
+    public UnityEvent death;
 
     private void Start()
     {
         StartingBeatsPerMinute = BeatsPerMinute;
+        //source = this.GetComponent<AudioSource>();
+        previousTime = Time.time;
     }
     private void FixedUpdate()
     {
+        if (Death)
+        {
+            if (BeatsPerMinute <= DeathValue.x || BeatsPerMinute >= DeathValue.y)
+            {
+                DeathTime -= Time.deltaTime;
+            }
+        }
+        if (DeathTime <= 0)
+        {
+            death.Invoke();
+        }
+
+        if (BeatsPerMinute <= 0)
+        {
+            source.clip = flatLine;
+            source.loop = true;
+            if (!source.isPlaying)
+            {
+                source.Play();
+            }
+
+            waitTime = 60 / BeatsPerMinute;
+            previousTime = Time.time;
+        }
+        else
+        {
+            if (Time.time - previousTime >= waitTime)
+            {
+                source.loop = false;
+                source.clip = beat;
+                source.Play();
+                waitTime = 60 / BeatsPerMinute;
+                previousTime = Time.time;
+            }
+
+        }
         bpmText.text = ((int)BeatsPerMinute).ToString();
 
 
@@ -77,8 +126,8 @@ public class electrocardiogram : MonoBehaviour
         bpm_line.keys = keys;
 
 
-       
-        
+
+
 
 
         if (Time.time > nextActionTime)
@@ -104,7 +153,7 @@ public class electrocardiogram : MonoBehaviour
         if (Time.time - active_time < bpm_line.length)
         {
             line_renderer.AddPoint(Time.time * compression, bpm_line.Evaluate((Time.time - active_time) * (compression + move_speed)));
-           
+
         }
         else
         {

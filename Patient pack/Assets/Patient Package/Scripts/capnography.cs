@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
+using System;
+
 public class capnography : MonoBehaviour
 {
     [TextArea(15, 20)]
@@ -36,18 +38,32 @@ public class capnography : MonoBehaviour
     public float minValue;
     public UnityEvent min;
 
-    
+    [Header("DEATH")]
+    public bool Death;
+    public Vector2 DeathValue;
+    public float DeathTime;
+    public UnityEvent death;
 
     // Start is called before the first frame update
     void Start()
     {
         StartingCO2 = co2;
-        
+
     }
     // Update is called once per frame
     void FixedUpdate()
     {
-       
+        if (Death)
+        {
+            if (co2 <= DeathValue.x || co2 >= DeathValue.y)
+            {
+                DeathTime -= Time.deltaTime;
+            }
+        }
+        if (DeathTime <= 0)
+        {
+            death.Invoke();
+        }
 
 
         if (awrr.BreathsPerMinute >= 1)
@@ -99,7 +115,7 @@ public class capnography : MonoBehaviour
             }
             else
             {
-                nextActionTime += 60 / awrr.BreathsPerMinute;
+                nextActionTime += Math.Min(awrr.BreathsPerMinute, 60 / awrr.BreathsPerMinute);
                 active = true;
             }
         }

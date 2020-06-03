@@ -19,6 +19,11 @@ public class blood_volume : MonoBehaviour
     public int min;
     public UnityEvent minEvent;
     // Update is called once per frame
+    [Header("DEATH")]
+    public bool Death;
+    public float DeathValue;
+    public float DeathTime;
+    public UnityEvent death;
 
     private void Start()
     {
@@ -26,6 +31,14 @@ public class blood_volume : MonoBehaviour
     }
     void Update()
     {
+        if (Death && volume <= DeathValue)
+        {
+            DeathTime -= Time.deltaTime;
+        }
+        if (DeathTime <= 0)
+        {
+            death.Invoke();
+        }
         text.text = volume.ToString("F0");
 
         if (volume > max)

@@ -20,12 +20,27 @@ public class lung_volume : MonoBehaviour
     public UnityEvent minEvent;
     // Update is called once per frame
 
+    [Header("DEATH")]
+    public bool Death;
+    public float DeathValue;
+    public float DeathTime;
+    public UnityEvent death;
+
     private void Start()
     {
         StartingVolume = volume;
     }
     void Update()
     {
+        if (Death && volume <= DeathValue)
+        {
+            DeathTime -= Time.deltaTime;
+        }
+        if (DeathTime <= 0)
+        {
+            death.Invoke();
+        }
+
         text.text = volume.ToString("F0");
 
         if (volume > max)

@@ -12,7 +12,7 @@ public class airway_respiratory_rate : MonoBehaviour
     public string notes;
 
     public bool isBreathing;
-    [HideInInspector]
+    //[HideInInspector]
     public float StartingBreathsPerMinute;
     public float BreathsPerMinute;
     public TextMeshProUGUI text;
@@ -20,6 +20,13 @@ public class airway_respiratory_rate : MonoBehaviour
     public UnityEvent maxEvent;
     public int min;
     public UnityEvent minEvent;
+
+    [Header("DEATH")]
+    public bool Death;
+    public Vector2 DeathValue;
+    public float DeathTime;
+    public UnityEvent death;
+
     // Update is called once per frame
     private void Start()
     {
@@ -27,6 +34,18 @@ public class airway_respiratory_rate : MonoBehaviour
     }
     void Update()
     {
+        if (Death)
+        {
+            if (BreathsPerMinute <= DeathValue.x || BreathsPerMinute >= DeathValue.y)
+            {
+                DeathTime -= Time.deltaTime;
+            }
+        }
+        if (DeathTime <= 0)
+        {
+            death.Invoke();
+        }
+
         text.text = BreathsPerMinute.ToString("F0");
 
         if (BreathsPerMinute > max)
@@ -52,5 +71,6 @@ public class airway_respiratory_rate : MonoBehaviour
 
         BreathsPerMinute = temp_breathsPerMinute + temp_mod;
         */
+
     }
 }

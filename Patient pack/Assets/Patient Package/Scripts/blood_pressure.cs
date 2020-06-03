@@ -10,6 +10,7 @@ public class blood_pressure : MonoBehaviour
     public string notes;
 
     [Header("SYSTOLIC")]
+    public TextMeshProUGUI systolicText;
     public float BloodPressureSystolic;
     public int systolicMinValue;
     public UnityEvent systolicMin;
@@ -17,8 +18,9 @@ public class blood_pressure : MonoBehaviour
     public UnityEvent systolicMax;
     [HideInInspector]
     public float StartingSystolic;
-    
+
     [Header("DIASTOLIC")]
+    public TextMeshProUGUI diastolicText;
     public float BloodPressureDiastolic;
     public int diastolicMinValue;
     public UnityEvent diastolicMin;
@@ -33,6 +35,7 @@ public class blood_pressure : MonoBehaviour
     public UnityEvent meanMin;
     public int meanMaxValue;
     public UnityEvent meanMax;
+
     [Header("LINE RENDERER")]
     // none of this is used yet
     public patient_line_renderer line_renderer;
@@ -42,10 +45,20 @@ public class blood_pressure : MonoBehaviour
     public float compression;
     public float move_speed;
     public bool active;
+
+    [Header("DEATH")]
+    public bool systolicDeath;
+    public Vector2 systolicDeathValue;
+    public float systolicDeathTime;
+    public bool diastolicDeath;
+    public Vector2 diastolicDeathValue;
+    public float diastolicDeathTime;
+    public UnityEvent death;
+
+    private string valuesString = "";
     private float nextActionTime = 0.0f;
     private float active_time;
 
-    private string valuesString = "";
 
     private void Start()
     {
@@ -55,6 +68,25 @@ public class blood_pressure : MonoBehaviour
     //other
     private void FixedUpdate()
     {
+        if (systolicDeath)
+        {
+            if (BloodPressureSystolic <= systolicDeathValue.x || BloodPressureSystolic >= systolicDeathValue.y)
+            {
+                systolicDeathTime -= Time.deltaTime;
+            }
+        }
+        if (diastolicDeath)
+        {
+            if (BloodPressureDiastolic <= diastolicDeathValue.x || BloodPressureDiastolic >= diastolicDeathValue.y)
+            {
+                systolicDeathTime -= Time.deltaTime;
+            }
+        }
+        if (systolicDeathTime <= 0 || diastolicDeathTime <= 0)
+        {
+            death.Invoke();
+        }
+
         float bpm = 60;
         //systolid max and min events
         if (BloodPressureSystolic > systolicMaxValue)
@@ -64,11 +96,11 @@ public class blood_pressure : MonoBehaviour
         else if (BloodPressureSystolic < systolicMinValue || bpm == 0)
         {
             systolicMin.Invoke();
-            valuesString = "--/";
+            systolicText.text = "--";
         }
         else
         {
-            valuesString = BloodPressureSystolic.ToString("F0") + "/";
+            systolicText.text = BloodPressureSystolic.ToString("F0");
         }
         //diastolic max and min events
         if (BloodPressureDiastolic > diastolicMaxValue)
@@ -78,11 +110,11 @@ public class blood_pressure : MonoBehaviour
         else if (BloodPressureDiastolic < diastolicMinValue || bpm == 0)
         {
             diastolicMin.Invoke();
-            valuesString += "--";
+            diastolicText.text = "--";
         }
         else
         {
-            valuesString += BloodPressureDiastolic.ToString("F0");
+            diastolicText.text = BloodPressureDiastolic.ToString("F0");
         }
         //mean max and min events
         if (((BloodPressureDiastolic + BloodPressureSystolic) / 2) > meanMaxValue)
@@ -92,11 +124,11 @@ public class blood_pressure : MonoBehaviour
         else if (((BloodPressureDiastolic + BloodPressureSystolic) / 2) < meanMinValue || bpm == 0)
         {
             meanMin.Invoke();
-            valuesString += "\n(--)";
+            valuesString = "(--)";
         }
         else
         {
-            valuesString += "\n(" + ((BloodPressureDiastolic + BloodPressureSystolic) / 2).ToString("F0") + ")";
+            valuesString = "(" + ((BloodPressureDiastolic + BloodPressureSystolic) / 2).ToString("F0") + ")";
         }
 
         mean.text = valuesString;
