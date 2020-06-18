@@ -84,23 +84,34 @@ public class vital_mod
     }
 }
 
+[System.Serializable]
+public enum category // your custom enumeration
+{
+    Start,
+    Airway,
+    Breathing,
+    Circulation,
+    Treatments,
+    DiagnosticTest,
+    PhysicalExam,
+    Complete,
+    Condition,
+    none,
+    debug,
+    Head,
+    Neck,
+    Arms,
+    Legs,
+    Chest,
+    Pelvic,
+    Treatment,
+    Assesment,
+    Abdomen
+};
 
 public class Treatment : MonoBehaviour
 {
-    public enum category // your custom enumeration
-    {
-        Start,
-        Airway,
-        Breathing,
-        Circulation,
-        Treatments,
-        DiagnosticTest,
-        PhysicalExam,
-        Complete,
-        Condition,
-        none,
-        debug
-    };
+
 
     [TextArea(15, 20)]
     public string notes;
@@ -110,8 +121,12 @@ public class Treatment : MonoBehaviour
     public float TreatmentTimeout;
     public float TimeTillActive;
     public bool disableAfterUsed;
-
-    public category TreatmentCategory;
+    public bool required;
+    public string preRequiredTreatment;
+    public List<category> TreatmentCategory;
+    public bool isBad = false;
+    [TextArea(3, 20)]
+    public string badString = "";
 
     public int chanceOfSuccess = 100;
     [TextArea(3, 20)]
