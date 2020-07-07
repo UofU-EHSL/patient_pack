@@ -1,11 +1,5 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2019.3.5f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2019.3.5f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
-  error: 1 plat 4 at (0): Program 'MarchCube', warning X4714: sum of temp registers and indexable temp registers times 1024 threads exceeds the recommended total 16384.  Performance may be reduced
-  error: 1 plat 4 at Brain.compute(77): implicit truncation of vector type
-  error: 1 plat 4 at Brain.compute(78): implicit truncation of vector type
-  error: 1 plat 4 at Brain.compute(79): implicit truncation of vector type
-  error: 1 plat 4 at Brain.compute(100): signed/unsigned mismatch, unsigned assumed
-  error: 1 plat 4 at Brain.compute(124): signed/unsigned mismatch, unsigned assumed
-  error: 1 plat 4 at Brain.compute(218): signed/unsigned mismatch, unsigned assumed
-  api=4 insize=7350 outsize=152654 ok=1
+  error: 1 plat 4 at SphereDensity.compute(9): signed/unsigned mismatch, unsigned assumed
+  api=4 insize=487 outsize=1045 ok=1

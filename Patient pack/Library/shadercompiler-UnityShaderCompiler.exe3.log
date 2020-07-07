@@ -1,12 +1,5 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2019.3.5f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2019.3.5f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
-  error: 1 plat 9 at Brain.compute(77): implicit truncation of vector type
-  error: 1 plat 9 at Brain.compute(78): implicit truncation of vector type
-  error: 1 plat 9 at Brain.compute(79): implicit truncation of vector type
-  error: 1 plat 9 at Brain.compute(100): signed/unsigned mismatch, unsigned assumed
-  error: 1 plat 9 at Brain.compute(124): signed/unsigned mismatch, unsigned assumed
-  error: 1 plat 9 at Brain.compute(218): signed/unsigned mismatch, unsigned assumed
-  api=9 insize=7350 outsize=8123 ok=1
-
-Quitting shader compiler process
+  error: 1 plat 18 at SphereDensity.compute(9): signed/unsigned mismatch, unsigned assumed
+  api=18 insize=487 outsize=4937 ok=1
