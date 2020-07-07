@@ -2,6 +2,7 @@
 {
 	Properties
 	{
+		_Steps("Steps", int) = 512
 		_DataTex("Data Texture (Generated)", 3D) = "" {}
 		_GradientTex("Gradient Texture (Generated)", 3D) = "" {}
 		_NoiseTex("Noise Texture (Generated)", 2D) = "white" {}
@@ -58,6 +59,7 @@
 				sampler2D _NoiseTex;
 				sampler2D _TFTex;
 
+				int _Steps;
 				float _MinVal;
 				float _MaxVal;
 
@@ -133,7 +135,7 @@
 				// Direct Volume Rendering
 				frag_out frag_dvr(frag_in i)
 				{
-					#define NUM_STEPS 512
+					#define NUM_STEPS _Steps
 
 					const float stepSize = 1.732f/*greatest distance in box*/ / NUM_STEPS;
 
@@ -194,7 +196,7 @@
 				// Maximum Intensity Projection mode
 				frag_out frag_mip(frag_in i)
 				{
-					#define NUM_STEPS 512
+					#define NUM_STEPS _Steps
 					const float stepSize = 1.732f/*greatest distance in box*/ / NUM_STEPS;
 
 					float3 rayStartPos = i.vertexLocal + float3(0.5f, 0.5f, 0.5f);
@@ -233,7 +235,7 @@
 				// Draws the first point (closest to camera) with a density within the user-defined thresholds.
 				frag_out frag_surf(frag_in i)
 				{
-					#define NUM_STEPS 1024
+					#define NUM_STEPS _Steps
 					const float stepSize = 1.732f/*greatest distance in box*/ / NUM_STEPS;
 
 					float3 rayStartPos = i.vertexLocal + float3(0.5f, 0.5f, 0.5f);
