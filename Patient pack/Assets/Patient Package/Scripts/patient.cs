@@ -62,7 +62,10 @@ public class patient : MonoBehaviour
             if (single.showVital == false)
             {
                 single.backPlane.GetComponent<MeshRenderer>().sharedMaterial.color = NoColor;
-                single.AudioSource.clip = null;
+                if (single.AudioSource)
+                {
+                    single.AudioSource.clip = null;
+                }
                 foreach (AudioSource singleAudio in single.otherAudio)
                 {
                     singleAudio.volume = 0;
@@ -201,13 +204,14 @@ public class patient : MonoBehaviour
 
     public void Start()
     {
-        updateViz();
+        
 
         foreach (vital single in Vitals_visuals)
         {
             single.initColor = single.color;
             Debug.Log("length:" + single.text_items[0].text.Length + " value:" + single.text_items[0].text + " vital:" + single.text_items[0].transform.parent.name);
         }
+        updateViz();
     }
     public void Update()
     {
