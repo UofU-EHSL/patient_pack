@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Video;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 [System.Serializable]
 public class vital_mod
 {
@@ -113,40 +117,55 @@ public class Treatment : MonoBehaviour
 {
 
 
-    [TextArea(15, 20)]
+    
     public string notes;
+    
     public float TimeItTakesDoctor;
 
-    [Header("Activation system")]
+    //[Header("Activation system")]
+    
     public float TreatmentTimeout;
+    
     public float TimeTillActive;
+    
     public bool disableAfterUsed;
+    
     public bool required;
+    
     public string preRequiredTreatment;
+    
     public List<category> TreatmentCategory;
+    
     public bool isBad = false;
-    [TextArea(3, 20)]
+    
     public string badString = "";
 
+    
     public int chanceOfSuccess = 100;
-    [TextArea(3, 20)]
+    
     public string failCaption;
-    [TextArea(3, 20)]
+    
     public string successCaption;
+    
     private bool treatmentFailed = false;
+    
     public vital_mod[] vitalMods;
 
+    
     public GameObject doctor_manager;
+    
     private GameObject active_doctor;
-
+    
     private AudioSource audioClip;
-    [TextArea(3, 20)]
+    
     public string audioCaption;
 
 
-    [Header("Multi-Media")]
+    
     public Material image;
+    
     public VideoClip videoClip;
+    
     public Vector2 size;
 
     private void Start()
@@ -273,3 +292,48 @@ public class Treatment : MonoBehaviour
     }
 }
 
+#if UNITY_EDITOR
+[CustomEditor(typeof(Treatment))]
+public class Treatment_Editor : Editor
+{
+    [MenuItem("Window/My Window")]
+    public override void OnInspectorGUI()
+    {
+        DrawDefaultInspector();
+
+        Treatment myScript = (Treatment)target;
+        if (GUILayout.Button("Edit treatment"))
+        {
+            EditTreatment();
+        }
+    }
+    public void EditTreatment()
+    {
+        // Get existing open window or if none, make a new one:
+        MyWindow window = (MyWindow)EditorWindow.GetWindow(typeof(MyWindow));
+        window.Show();
+    }
+
+}
+[CustomEditor(typeof(Treatment))]
+public class MyWindow : EditorWindow
+{
+    
+    string myString = ;
+    bool groupEnabled;
+    bool myBool = true;
+    float myFloat = 1.23f;
+    void OnGUI()
+    {
+
+        GUILayout.Label("Base Settings", EditorStyles.boldLabel);
+        myString = EditorGUILayout.TextField("Text Field", myString);
+
+        groupEnabled = EditorGUILayout.BeginToggleGroup("Optional Settings", groupEnabled);
+        myBool = EditorGUILayout.Toggle("Toggle", myBool);
+        myFloat = EditorGUILayout.Slider("Slider", myFloat, -3, 3);
+
+        EditorGUILayout.EndToggleGroup();
+    }
+}
+#endif
