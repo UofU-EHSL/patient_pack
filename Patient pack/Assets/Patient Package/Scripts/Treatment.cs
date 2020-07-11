@@ -113,40 +113,47 @@ public class Treatment : MonoBehaviour
 {
 
 
-    [TextArea(10,10)]
-    public string notes;
+    public string notes;//
     
     [HideInInspector]
-    public float TimeItTakesDoctor;
+    public float TimeItTakesDoctor;//
 
     //[Header("Activation system")]
     [HideInInspector]
-    public float TreatmentTimeout;
+    public float TreatmentTimeout;//
     [HideInInspector]
-    public float TimeTillActive;
+    public float TimeTillActive;// I think this is generated
     [HideInInspector]
-    public bool disableAfterUsed;
+    public bool disableAfterUsed;//
     [HideInInspector]
-    public bool required;
+    public bool required;//
     [HideInInspector]
-    public string preRequiredTreatment;
+    public string preRequiredTreatment;//
     [HideInInspector]
     public List<category> TreatmentCategory;
     [HideInInspector]
-    public bool isBad = false;
+    public bool isBad = false;//
     [HideInInspector]
-    public string badString = "";
+    public string badString = "";//
 
     [HideInInspector]
-    public int chanceOfSuccess = 100;
+    public float chanceOfSuccess = 100;//
     [HideInInspector]
-    public string failCaption;
+    public string failCaption;//
     [HideInInspector]
-    public string successCaption;
+    public bool hasFailAudio;//
     [HideInInspector]
-    private bool treatmentFailed = false;
+    public AudioClip FailAudioClip;//
     [HideInInspector]
-    public vital_mod[] vitalMods;
+    public string successCaption;//
+    [HideInInspector]
+    public bool hasSuccessAudio;//
+    [HideInInspector]
+    public AudioClip SuccessAudioClip;//
+    [HideInInspector]
+    private bool treatmentFailed = false;//This is private
+    [HideInInspector]
+    public List<vital_mod> vitalMods;
 
     [HideInInspector]
     public GameObject doctor_manager;
