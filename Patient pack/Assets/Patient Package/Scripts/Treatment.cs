@@ -23,8 +23,8 @@ public class vital_mod
     };
 
     public vitalType vitalToMod;
-    public AnimationCurve StartCurve;
-    public AnimationCurve EndCurve;
+    public AnimationCurve StartCurve;//
+    public AnimationCurve EndCurve;//
 
     [System.Serializable]
     public class issue
@@ -33,7 +33,7 @@ public class vital_mod
         public vitalType vitalType;
     }
 
-    public issue[] fixes_isses;
+    public List<issue> fixes_issues;
     public UnityEvent WhenApplied;
     public UnityEvent WhenFinished;
     public bool finished = false;
@@ -119,58 +119,60 @@ public class Treatment : MonoBehaviour
     public float TimeItTakesDoctor;//
 
     //[Header("Activation system")]
-    [HideInInspector]
+    //[HideInInspector]
     public float TreatmentTimeout;//
-    [HideInInspector]
+    //[HideInInspector]
     public float TimeTillActive;// I think this is generated
-    [HideInInspector]
+    //[HideInInspector]
     public bool disableAfterUsed;//
-    [HideInInspector]
+    //[HideInInspector]
     public bool required;//
-    [HideInInspector]
+    //[HideInInspector]
     public string preRequiredTreatment;//
-    [HideInInspector]
+    //[HideInInspector]
     public List<category> TreatmentCategory;
-    [HideInInspector]
+    //[HideInInspector]
     public bool isBad = false;//
-    [HideInInspector]
+    //[HideInInspector]
     public string badString = "";//
 
-    [HideInInspector]
+    //[HideInInspector]
     public float chanceOfSuccess = 100;//
-    [HideInInspector]
+    //[HideInInspector]
     public string failCaption;//
-    [HideInInspector]
+    //[HideInInspector]
     public bool hasFailAudio;//
-    [HideInInspector]
+    //[HideInInspector]
     public AudioClip FailAudioClip;//
-    [HideInInspector]
+    //[HideInInspector]
     public string successCaption;//
-    [HideInInspector]
+    //[HideInInspector]
     public bool hasSuccessAudio;//
-    [HideInInspector]
+    //[HideInInspector]
     public AudioClip SuccessAudioClip;//
-    [HideInInspector]
+    //[HideInInspector]
     private bool treatmentFailed = false;//This is private
-    [HideInInspector]
+    //[HideInInspector]
     public List<vital_mod> vitalMods;
 
-    [HideInInspector]
+    //[HideInInspector]
     public GameObject doctor_manager;
-    [HideInInspector]
+    //[HideInInspector]
     private GameObject active_doctor;
-    [HideInInspector]
+    //[HideInInspector]
     private AudioSource audioClip;
-    [HideInInspector]
+    //[HideInInspector]
     public string audioCaption;
 
 
-    [HideInInspector]
-    public Material image;
-    [HideInInspector]
+    //[HideInInspector]
+    public bool hasMultiMedia;//
+    //[HideInInspector]
+    public Material image;//
+    //[HideInInspector]
     public VideoClip videoClip;
-    [HideInInspector]
-    public Vector2 size;
+    //[HideInInspector]
+    public Vector2 size;//
 
     private void Start()
     {
@@ -192,9 +194,9 @@ public class Treatment : MonoBehaviour
                 foreach (vital_mod vm in vitalMods)
                 {
                     vm.SetActive();
-                    if (vm.fixes_isses.Length > 0)
+                    if (vm.fixes_issues.Count > 0)
                     {
-                        foreach (vital_mod.issue i in vm.fixes_isses)
+                        foreach (vital_mod.issue i in vm.fixes_issues)
                         {
                             //search through the vital mod's children then find the one with the name
                             //set the vm in that treatment to inactive. 

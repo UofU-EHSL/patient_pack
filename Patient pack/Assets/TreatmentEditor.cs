@@ -32,35 +32,68 @@ public class TreatmentScriptEditor : Editor
     }
     public override void OnInspectorGUI()
     {
+        Color defaultColor = GUI.color;
+        var style = new GUIStyle(GUI.skin.button);
+        style.normal.textColor = Color.white;
+        style.hover.textColor = Color.white;
+        
         if (page == 0)
         {
             BasicInfo();
-            if (GUILayout.Button("Next →"))
-            {
-                Next();
-            }
+            GUI.backgroundColor = Color.black;
+                if (GUILayout.Button("Menu options →", style))
+                {
+                    Page(1);
+                }
+            GUI.backgroundColor = defaultColor;
         }
         else if (page == 1)
         {
             MenuOption();
+            GUI.backgroundColor = Color.black;
             GUILayout.BeginHorizontal(EditorStyles.helpBox);
-                if (GUILayout.Button("← Prev"))
+                if (GUILayout.Button("← Basic info", style))
                 {
-                    Prev();
+                    Page(0);
                 }
-                if (GUILayout.Button("Next →"))
+                if (GUILayout.Button("Vital options →", style))
                 {
-                    Next();
+                    Page(2);
                 }
             GUILayout.EndHorizontal();
+            GUI.backgroundColor = defaultColor;
         }
         else if (page == 2)
         {
             vitalOptions();
-            if (GUILayout.Button("← Prev"))
-            {
-                Prev();
-            }
+            GUI.backgroundColor = Color.black;
+            GUILayout.BeginHorizontal(EditorStyles.helpBox);
+                if (GUILayout.Button("← Menu options", style))
+                {
+                    Page(1);
+                }
+                if (GUILayout.Button("Dev tools →", style))
+                {
+                    Page(3);
+                }
+            GUILayout.EndHorizontal();
+            GUI.backgroundColor = defaultColor;
+        }
+        else if (page == 3)
+        {
+            DevOptions();
+            GUI.backgroundColor = Color.black;
+            GUILayout.BeginHorizontal(EditorStyles.helpBox);
+                if (GUILayout.Button("← Vital options", style))
+                {
+                    Page(2);
+                }
+                if (GUILayout.Button("Basic info →", style))
+                {
+                    Page(0);
+                }
+            GUILayout.EndHorizontal();
+            GUI.backgroundColor = defaultColor;
         }
     }
     // In-Editor function to add an AudioClip to the audioClips list.
@@ -74,10 +107,25 @@ public class TreatmentScriptEditor : Editor
         myTarget.vitalMods.RemoveAt(index);
     }
 
+    // In-Editor function to add an AudioClip to the audioClips list.
+    public void AddVitalIssue(int vital)
+    {
+        if (myTarget.vitalMods[vital].fixes_issues == null)
+        {
+            myTarget.vitalMods[vital].fixes_issues = new System.Collections.Generic.List<vital_mod.issue>();
+        }
+        myTarget.vitalMods[vital].fixes_issues.Add(new vital_mod.issue());
+    }
+    // In-Editor function to remove an AudioClip from the audioClips list.
+    public void RemoveVitalIssue(int vital, int issue)
+    {
+        myTarget.vitalMods[vital].fixes_issues.RemoveAt(issue);
+    }
+
+
     public void BasicInfo()
     {
         //Basic info
-        GUILayout.Space(25);
         GUILayout.Label("Basic info", EditorStyles.boldLabel);
         GUILayout.BeginVertical(EditorStyles.helpBox);
         myTarget.name = EditorGUILayout.TextField("Name: ", myTarget.name);
@@ -99,6 +147,7 @@ public class TreatmentScriptEditor : Editor
 
         GUILayout.EndVertical();
         GUILayout.Space(25);
+        multiMedia();
     }
 
     public void MenuOption()
@@ -129,6 +178,7 @@ public class TreatmentScriptEditor : Editor
             }
         }
         EditorGUI.indentLevel--;
+        EditorGUI.indentLevel++;
         if (myTarget.chanceOfSuccess < 100)
         {
             GUILayout.Label("Fail caption:");
@@ -142,7 +192,7 @@ public class TreatmentScriptEditor : Editor
                 EditorGUI.indentLevel--;
             }
         }
-
+        EditorGUI.indentLevel--;
 
         GUILayout.EndHorizontal();
         GUILayout.Space(25);
@@ -150,36 +200,97 @@ public class TreatmentScriptEditor : Editor
 
     public void vitalOptions()
     {
+        Color defaultColor = GUI.color;
         //Vital options
         GUILayout.Label("Vital options", EditorStyles.boldLabel);
-        GUILayout.BeginVertical(EditorStyles.helpBox);
-        for (int count = 0; count < myTarget.vitalMods.Count; count++)
+        if (myTarget.vitalMods != null)
         {
-            GUILayout.BeginVertical(EditorStyles.helpBox);
-            GUILayout.BeginHorizontal(EditorStyles.helpBox);
-            GUILayout.Label(myTarget.vitalMods[count].vitalToMod.ToString());
-            if (GUILayout.Button("Remove change"))
+            for (int count = 0; count < myTarget.vitalMods.Count; count++)
             {
-                RemoveVital(count);
+
+                GUILayout.BeginVertical(EditorStyles.helpBox);
+                GUILayout.BeginHorizontal(EditorStyles.helpBox);
+                GUILayout.Label(myTarget.vitalMods[count].vitalToMod.ToString());
+
+                var style = new GUIStyle(GUI.skin.button);
+                style.normal.textColor = Color.white;
+                GUI.backgroundColor = Color.red;
+                if (GUILayout.Button("Remove change", style))
+                    {
+                        RemoveVital(count);
+                    }
+                GUI.backgroundColor = defaultColor;
+                GUILayout.EndHorizontal();
+
+                EditorGUI.indentLevel++;
+
+                myTarget.vitalMods[count].vitalToMod = (vital_mod.vitalType)EditorGUILayout.EnumPopup("Vital type: ", myTarget.vitalMods[count].vitalToMod);
+
+                if (myTarget.vitalMods[count].StartCurve == null)
+                {
+                    myTarget.vitalMods[count].StartCurve = new AnimationCurve();
+                }
+                if (myTarget.vitalMods[count].EndCurve == null)
+                {
+                    myTarget.vitalMods[count].EndCurve = new AnimationCurve();
+                }
+                myTarget.vitalMods[count].StartCurve = EditorGUILayout.CurveField("Start curve: ", myTarget.vitalMods[count].StartCurve);
+                myTarget.vitalMods[count].EndCurve = EditorGUILayout.CurveField("End curve: ", myTarget.vitalMods[count].EndCurve);
+
+
+                ////////
+                /// Start and finish unity events
+                ///////
+                if (myTarget.vitalMods[count].fixes_issues != null) {
+                    for (int count2 = 0; count2 < myTarget.vitalMods[count].fixes_issues.Count; count2++)
+                    {
+                        GUILayout.Space(15);
+                        GUILayout.BeginVertical(EditorStyles.helpBox);
+                        EditorGUI.indentLevel++;
+                        GUILayout.BeginHorizontal(EditorStyles.helpBox);
+                        //GUILayout.Label("Instantly fixes " + myTarget.vitalMods[count].fixes_issues[count2].name.ToString());
+
+                            style.normal.textColor = Color.white;
+                            GUI.backgroundColor = Color.red;
+                            
+                            if (GUILayout.Button("Remove instant fix to an issue", style))
+                            {
+                                RemoveVitalIssue(count, count2);
+                            }
+                        GUI.backgroundColor = defaultColor;
+                        GUILayout.EndHorizontal();
+                        myTarget.vitalMods[count].fixes_issues[count2].name = EditorGUILayout.TextField("Issue name: ", myTarget.vitalMods[count].fixes_issues[count2].name);
+                        myTarget.vitalMods[count].fixes_issues[count2].vitalType = (vital_mod.vitalType)EditorGUILayout.EnumPopup("Vital type: ", myTarget.vitalMods[count].fixes_issues[count2].vitalType);
+
+                        EditorGUI.indentLevel--;
+                        GUILayout.EndVertical();
+                        
+                    }
+                }
+                GUILayout.Space(25);
+
+                if (GUILayout.Button("Add instant fix to an issue"))
+                {
+                    AddVitalIssue(count);
+                }
+                EditorGUI.indentLevel--;
+                GUILayout.EndVertical();
+                GUILayout.Space(15);
             }
-            GUILayout.EndHorizontal();
-
-            EditorGUI.indentLevel++;
-            EditorGUILayout.EnumPopup("Vital type: ", myTarget.vitalMods[count].vitalToMod);
-            myTarget.vitalMods[count].vitalToMod = (myTarget.vitalMods[count].vitalToMod);
-
-            myTarget.vitalMods[count].StartCurve = EditorGUILayout.CurveField("Start curve: ", myTarget.vitalMods[count].StartCurve);
-            myTarget.vitalMods[count].EndCurve = EditorGUILayout.CurveField("End curve: ", myTarget.vitalMods[count].EndCurve);
-            EditorGUI.indentLevel--;
-            GUILayout.EndVertical();
         }
-        GUILayout.Space(30);
+
         if (GUILayout.Button("Add Vital change"))
-        {
-            AddVital();
-        }
-        GUILayout.EndHorizontal();
+            {
+                AddVital();
+            }
+        GUI.backgroundColor = defaultColor;
+        GUI.color = defaultColor;
 
+        GUILayout.Space(15);
+    }
+
+    public void DevOptions()
+    {
         GUILayout.Label("Dev tools", EditorStyles.boldLabel);
         GUILayout.BeginVertical(EditorStyles.helpBox);
         GUILayout.Label("Test option", EditorStyles.boldLabel);
@@ -191,14 +302,23 @@ public class TreatmentScriptEditor : Editor
         // end of the notes section
     }
 
-    public void Next()
+    public void multiMedia()
     {
-        page++;
+        myTarget.hasMultiMedia = EditorGUILayout.Toggle("Use ulti-media?", myTarget.hasMultiMedia);
+        GUILayout.BeginVertical(EditorStyles.helpBox);
+            if (myTarget.hasMultiMedia == true)
+            {
+                myTarget.image = (Material)EditorGUILayout.ObjectField(myTarget.image, typeof(Material), true);
+                if (myTarget.image != null)
+                {
+                    myTarget.size = EditorGUILayout.Vector2Field("Media size (cm): ", myTarget.size);
+                }
+            }
+        GUILayout.EndVertical();
     }
 
-    public void Prev()
+    public void Page(int GoToPage)
     {
-        page--;
+        page = GoToPage;
     }
 }
-
