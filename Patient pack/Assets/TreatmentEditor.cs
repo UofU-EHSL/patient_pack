@@ -122,11 +122,13 @@ public class TreatmentScriptEditor : Editor
         myTarget.vitalMods[vital].fixes_issues.RemoveAt(issue);
     }
 
-
+    private GUIStyle headerStyle = new GUIStyle();
     public void BasicInfo()
     {
         //Basic info
-        GUILayout.Label("Basic info", EditorStyles.boldLabel);
+        headerStyle.fontSize = 20; //change the font size
+        headerStyle.fontStyle = FontStyle.Bold;
+        GUILayout.Label("Basic info", headerStyle);
         GUILayout.BeginVertical(EditorStyles.helpBox);
         myTarget.name = EditorGUILayout.TextField("Name: ", myTarget.name);
         // Treatment categories go here
@@ -153,7 +155,10 @@ public class TreatmentScriptEditor : Editor
     public void MenuOption()
     {
         //Menu options
-        GUILayout.Label("Menu options", EditorStyles.boldLabel);
+        headerStyle.fontSize = 20; //change the font size
+        headerStyle.fontStyle = FontStyle.Bold;
+
+        GUILayout.Label("Menu options", headerStyle);
         GUILayout.BeginVertical(EditorStyles.helpBox);
         myTarget.disableAfterUsed = EditorGUILayout.Toggle("Single-use action: ", myTarget.disableAfterUsed);
         if (myTarget.disableAfterUsed == false)
@@ -201,8 +206,11 @@ public class TreatmentScriptEditor : Editor
     public void vitalOptions()
     {
         Color defaultColor = GUI.color;
-        //Vital options
-        GUILayout.Label("Vital options", EditorStyles.boldLabel);
+        headerStyle.fontSize = 20; //change the font size
+        headerStyle.fontStyle = FontStyle.Bold;
+        GUILayout.Label("Vital options", headerStyle);
+
+        GUILayout.BeginVertical(EditorStyles.helpBox);
         if (myTarget.vitalMods != null)
         {
             for (int count = 0; count < myTarget.vitalMods.Count; count++)
@@ -238,51 +246,65 @@ public class TreatmentScriptEditor : Editor
                 myTarget.vitalMods[count].EndCurve = EditorGUILayout.CurveField("End curve: ", myTarget.vitalMods[count].EndCurve);
 
 
-                ////////
-                /// Start and finish unity events
-                ///////
-                if (myTarget.vitalMods[count].fixes_issues != null) {
-                    for (int count2 = 0; count2 < myTarget.vitalMods[count].fixes_issues.Count; count2++)
-                    {
-                        GUILayout.Space(15);
-                        GUILayout.BeginVertical(EditorStyles.helpBox);
-                        EditorGUI.indentLevel++;
-                        GUILayout.BeginHorizontal(EditorStyles.helpBox);
-                        //GUILayout.Label("Instantly fixes " + myTarget.vitalMods[count].fixes_issues[count2].name.ToString());
-
-                            style.normal.textColor = Color.white;
-                            GUI.backgroundColor = Color.red;
-                            
-                            if (GUILayout.Button("Remove instant fix to an issue", style))
-                            {
-                                RemoveVitalIssue(count, count2);
-                            }
-                        GUI.backgroundColor = defaultColor;
-                        GUILayout.EndHorizontal();
-                        myTarget.vitalMods[count].fixes_issues[count2].name = EditorGUILayout.TextField("Issue name: ", myTarget.vitalMods[count].fixes_issues[count2].name);
-                        myTarget.vitalMods[count].fixes_issues[count2].vitalType = (vital_mod.vitalType)EditorGUILayout.EnumPopup("Vital type: ", myTarget.vitalMods[count].fixes_issues[count2].vitalType);
-
-                        EditorGUI.indentLevel--;
-                        GUILayout.EndVertical();
-                        
-                    }
-                }
-                GUILayout.Space(25);
-
-                if (GUILayout.Button("Add instant fix to an issue"))
-                {
-                    AddVitalIssue(count);
-                }
                 EditorGUI.indentLevel--;
                 GUILayout.EndVertical();
-                GUILayout.Space(15);
             }
         }
+        GUILayout.Space(15);
 
         if (GUILayout.Button("Add Vital change"))
+        {
+            AddVital();
+        }
+        GUILayout.EndVertical();
+
+        GUILayout.Space(30);
+        GUILayout.Label("Fixes vital from issue", headerStyle);
+        if (myTarget.vitalMods.Count > 0)
+        {
+            GUILayout.BeginVertical(EditorStyles.helpBox);
+            if (myTarget.vitalMods[0].fixes_issues != null)
             {
-                AddVital();
+                for (int count2 = 0; count2 < myTarget.vitalMods[0].fixes_issues.Count; count2++)
+                {
+
+                    GUILayout.BeginVertical(EditorStyles.helpBox);
+                    EditorGUI.indentLevel++;
+                    GUILayout.BeginHorizontal(EditorStyles.helpBox);
+                    //GUILayout.Label("Instantly fixes " + myTarget.vitalMods[count].fixes_issues[count2].name.ToString());
+
+
+                    GUILayout.BeginHorizontal(EditorStyles.helpBox);
+                    //GUILayout.Label(myTarget.vitalMods[0].fixes_issues[count2].name.ToString());
+
+                    var style = new GUIStyle(GUI.skin.button);
+                    style.normal.textColor = Color.white;
+                    GUI.backgroundColor = Color.red;
+                    if (GUILayout.Button("Remove instant fix to an issue", style))
+                        {
+                            RemoveVitalIssue(0, count2);
+                        }
+                    GUILayout.EndHorizontal();
+                    GUI.backgroundColor = defaultColor;
+                    GUILayout.EndHorizontal();
+                    myTarget.vitalMods[0].fixes_issues[count2].name = EditorGUILayout.TextField("Issue name: ", myTarget.vitalMods[0].fixes_issues[count2].name);
+                    myTarget.vitalMods[0].fixes_issues[count2].vitalType = (vital_mod.vitalType)EditorGUILayout.EnumPopup("Vital type: ", myTarget.vitalMods[0].fixes_issues[count2].vitalType);
+
+                    EditorGUI.indentLevel--;
+                    GUILayout.EndVertical();
+
+                }
             }
+            GUILayout.Space(15);
+            if (GUILayout.Button("Add instant fix to an issue"))
+            {
+                AddVitalIssue(0);
+            }
+
+            GUILayout.EndVertical();
+        }
+
+
         GUI.backgroundColor = defaultColor;
         GUI.color = defaultColor;
 
