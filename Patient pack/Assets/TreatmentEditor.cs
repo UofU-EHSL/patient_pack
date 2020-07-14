@@ -1,23 +1,53 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-public class MyWindow : EditorWindow
+public class NewTreatment : EditorWindow
 {
     public int page = 0;
-    Treatment myTarget;
+    public GameObject assesment;
+    Treatment TreatmentScript;
     TreatmentScriptEditor Treatment;
     // Add menu named "My Window" to the Window menu
-    [MenuItem("Patient Pack/New Treatment")]
+    [MenuItem("Patient Pack/New Assesment")]
     static void Init()
     {
         // Get existing open window or if none, make a new one:
-        MyWindow window = (MyWindow)EditorWindow.GetWindow(typeof(MyWindow));
+        NewTreatment window = (NewTreatment)EditorWindow.GetWindow(typeof(NewTreatment));
         window.Show();
+
+
     }
 
     void OnGUI()
     {
+        if (TreatmentScript == null)
+        {
+            assesment = new GameObject();
+            assesment.AddComponent<Treatment>();
+            TreatmentScript = (Treatment)assesment.GetComponent<Treatment>();
 
+            TreatmentScript.notes = "";
+            TreatmentScript.TreatmentCategory = new System.Collections.Generic.List<category>();
+            TreatmentScript.chanceOfSuccess = 100;
+            TreatmentScript.EnableModels = new System.Collections.Generic.List<GameObject>();
+            TreatmentScript.DisableModels = new System.Collections.Generic.List<GameObject>();
+        }
+        else
+        {
+            TreatmentScript.name = EditorGUILayout.TextField("Name: ", TreatmentScript.name);
+        }
+
+        GUILayout.BeginHorizontal(EditorStyles.helpBox);
+        if (GUILayout.Button("Create Assesment"))
+        {
+            Close();
+        }
+        if (GUILayout.Button("Close"))
+        {
+            DestroyImmediate(assesment.gameObject);
+            Close();
+        }
+        GUILayout.EndHorizontal();
     }
 }
 
@@ -348,42 +378,40 @@ public class TreatmentScriptEditor : Editor
     public void models()
     {
         GUILayout.BeginHorizontal(EditorStyles.helpBox);
-        GUILayout.BeginVertical(EditorStyles.helpBox);
-        headerStyle.fontSize = 15; //change the font size
-        headerStyle.fontStyle = FontStyle.Bold;
-        GUILayout.Label("Enable models: ", headerStyle);
-        for (int count = 0; count < myTarget.EnableModels.Count; count++)
-                    {
+            GUILayout.BeginVertical(EditorStyles.helpBox);
+                headerStyle.fontSize = 15; //change the font size
+                headerStyle.fontStyle = FontStyle.Bold;
+                GUILayout.Label("Enable models: ", headerStyle);
+                for (int count = 0; count < myTarget.EnableModels.Count; count++)
+                {
                     GUILayout.BeginHorizontal(EditorStyles.helpBox);
                     myTarget.EnableModels[count] = (GameObject)EditorGUILayout.ObjectField(myTarget.EnableModels[count], typeof(GameObject), true);
-
-                        if (GUILayout.Button("Remove"))
+                    if (GUILayout.Button("Remove"))
                         {
                             RemoveModelEnable(count);
                         }
                     GUILayout.EndHorizontal();
-                    }
+                }
                 if (GUILayout.Button("Add model to enable"))
                 {
                     AddModelEnable();
                 }
             GUILayout.EndVertical();
-            /////
+        /////
             GUILayout.BeginVertical(EditorStyles.helpBox);
             headerStyle.fontSize = 15; //change the font size
             headerStyle.fontStyle = FontStyle.Bold;
             GUILayout.Label("Disable models: ", headerStyle);
             for (int count = 0; count < myTarget.DisableModels.Count; count++)
+            {
+            GUILayout.BeginHorizontal(EditorStyles.helpBox);
+            myTarget.DisableModels[count] = (GameObject)EditorGUILayout.ObjectField(myTarget.DisableModels[count], typeof(GameObject), true);
+                if (GUILayout.Button("Remove"))
                 {
-                GUILayout.BeginHorizontal(EditorStyles.helpBox);
-                myTarget.DisableModels[count] = (GameObject)EditorGUILayout.ObjectField(myTarget.DisableModels[count], typeof(GameObject), true);
-
-                    if (GUILayout.Button("Remove"))
-                    {
-                        RemoveModelDisable(count);
-                    }
-                GUILayout.EndHorizontal();
+                    RemoveModelDisable(count);
                 }
+            GUILayout.EndHorizontal();
+            }
             if (GUILayout.Button("Add model to disable"))
             {
                 AddModelDisable();
