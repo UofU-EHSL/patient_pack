@@ -118,60 +118,36 @@ public class Treatment : MonoBehaviour
     [HideInInspector]
     public float TimeItTakesDoctor;//
 
-    //[Header("Activation system")]
-    //[HideInInspector]
     public float TreatmentTimeout;//
-    //[HideInInspector]
     public float TimeTillActive;// I think this is generated
-    //[HideInInspector]
     public bool disableAfterUsed;//
-    //[HideInInspector]
     public bool required;//
-    //[HideInInspector]
     public string preRequiredTreatment;//
-    //[HideInInspector]
     public List<category> TreatmentCategory;
-    //[HideInInspector]
     public bool isBad = false;//
-    //[HideInInspector]
     public string badString = "";//
 
-    //[HideInInspector]
     public float chanceOfSuccess = 100;//
-    //[HideInInspector]
     public string failCaption;//
-    //[HideInInspector]
     public bool hasFailAudio;//
-    //[HideInInspector]
     public AudioClip FailAudioClip;//
-    //[HideInInspector]
     public string successCaption;//
-    //[HideInInspector]
     public bool hasSuccessAudio;//
-    //[HideInInspector]
     public AudioClip SuccessAudioClip;//
-    //[HideInInspector]
     private bool treatmentFailed = false;//This is private
-    //[HideInInspector]
     public List<vital_mod> vitalMods;
 
-    //[HideInInspector]
     public GameObject doctor_manager;
-    //[HideInInspector]
     private GameObject active_doctor;
-    //[HideInInspector]
     private AudioSource audioClip;
-    //[HideInInspector]
     public string audioCaption;
 
+    public List<GameObject> EnableModels;
+    public List<GameObject> DisableModels;
 
-    //[HideInInspector]
     public bool hasMultiMedia;//
-    //[HideInInspector]
     public Material image;//
-    //[HideInInspector]
     public VideoClip videoClip;
-    //[HideInInspector]
     public Vector2 size;//
 
     private void Start()
@@ -180,6 +156,14 @@ public class Treatment : MonoBehaviour
         {
             TimeTillActive = TreatmentTimeout;
 
+            foreach (GameObject item in EnableModels)
+            {
+                item.SetActive(true);
+            }
+            foreach (GameObject item in DisableModels)
+            {
+                item.SetActive(false);
+            }
             if (this.gameObject.GetComponent<AudioSource>())
             {
                 audioClip = this.gameObject.GetComponent<AudioSource>();

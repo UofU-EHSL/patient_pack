@@ -40,6 +40,8 @@ public class TreatmentScriptEditor : Editor
         if (page == 0)
         {
             BasicInfo();
+            GUILayout.Space(15);
+            models();
             GUI.backgroundColor = Color.black;
                 if (GUILayout.Button("Menu options →", style))
                 {
@@ -146,10 +148,10 @@ public class TreatmentScriptEditor : Editor
             GUILayout.Label("Debrief when they did it wrong:");
             myTarget.badString = EditorGUILayout.TextArea(myTarget.badString, GUILayout.MinHeight(50));
         }
-
-        GUILayout.EndVertical();
-        GUILayout.Space(25);
         multiMedia();
+        GUILayout.EndVertical();
+
+
     }
 
     public void MenuOption()
@@ -326,7 +328,7 @@ public class TreatmentScriptEditor : Editor
 
     public void multiMedia()
     {
-        myTarget.hasMultiMedia = EditorGUILayout.Toggle("Use ulti-media?", myTarget.hasMultiMedia);
+        myTarget.hasMultiMedia = EditorGUILayout.Toggle("Use multi-media?", myTarget.hasMultiMedia);
         GUILayout.BeginVertical(EditorStyles.helpBox);
             if (myTarget.hasMultiMedia == true)
             {
@@ -342,5 +344,81 @@ public class TreatmentScriptEditor : Editor
     public void Page(int GoToPage)
     {
         page = GoToPage;
+    }
+    public void models()
+    {
+        GUILayout.BeginHorizontal(EditorStyles.helpBox);
+        GUILayout.BeginVertical(EditorStyles.helpBox);
+        headerStyle.fontSize = 15; //change the font size
+        headerStyle.fontStyle = FontStyle.Bold;
+        GUILayout.Label("Enable models: ", headerStyle);
+        for (int count = 0; count < myTarget.EnableModels.Count; count++)
+                    {
+                    GUILayout.BeginHorizontal(EditorStyles.helpBox);
+                    myTarget.EnableModels[count] = (GameObject)EditorGUILayout.ObjectField(myTarget.EnableModels[count], typeof(GameObject), true);
+
+                        if (GUILayout.Button("Remove"))
+                        {
+                            RemoveModelEnable(count);
+                        }
+                    GUILayout.EndHorizontal();
+                    }
+                if (GUILayout.Button("Add model to enable"))
+                {
+                    AddModelEnable();
+                }
+            GUILayout.EndVertical();
+            /////
+            GUILayout.BeginVertical(EditorStyles.helpBox);
+            headerStyle.fontSize = 15; //change the font size
+            headerStyle.fontStyle = FontStyle.Bold;
+            GUILayout.Label("Disable models: ", headerStyle);
+            for (int count = 0; count < myTarget.DisableModels.Count; count++)
+                {
+                GUILayout.BeginHorizontal(EditorStyles.helpBox);
+                myTarget.DisableModels[count] = (GameObject)EditorGUILayout.ObjectField(myTarget.DisableModels[count], typeof(GameObject), true);
+
+                    if (GUILayout.Button("Remove"))
+                    {
+                        RemoveModelDisable(count);
+                    }
+                GUILayout.EndHorizontal();
+                }
+            if (GUILayout.Button("Add model to disable"))
+            {
+                AddModelDisable();
+            }
+            GUILayout.EndVertical();
+        GUILayout.EndHorizontal();
+    }
+    public void RemoveModelEnable(int index)
+    {
+        myTarget.EnableModels.RemoveAt(index);
+    }
+    public void AddModelEnable()
+    {
+        if (myTarget.EnableModels.Count!=0)
+        {
+            myTarget.EnableModels.Add(myTarget.EnableModels[myTarget.EnableModels.Count-1]);
+        }
+        else
+        {
+            myTarget.EnableModels.Add(myTarget.gameObject);
+        }
+    }
+    public void RemoveModelDisable(int index)
+    {
+        myTarget.DisableModels.RemoveAt(index);
+    }
+    public void AddModelDisable()
+    {
+        if (myTarget.DisableModels.Count != 0)
+        {
+            myTarget.DisableModels.Add(myTarget.DisableModels[myTarget.DisableModels.Count - 1]);
+        }
+        else
+        {
+            myTarget.DisableModels.Add(myTarget.gameObject);
+        }
     }
 }
