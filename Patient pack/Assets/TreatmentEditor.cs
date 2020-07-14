@@ -1,30 +1,28 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-public class NewTreatment : EditorWindow
+public class NewAssessment : EditorWindow
 {
     public int page = 0;
-    public GameObject assesment;
+    public GameObject assessment;
     Treatment TreatmentScript;
     TreatmentScriptEditor Treatment;
     // Add menu named "My Window" to the Window menu
-    [MenuItem("Patient Pack/New Assesment")]
+
+    [MenuItem("Patient Pack/New Assessment")]
     static void Init()
     {
         // Get existing open window or if none, make a new one:
-        NewTreatment window = (NewTreatment)EditorWindow.GetWindow(typeof(NewTreatment));
+        NewAssessment window = (NewAssessment)EditorWindow.GetWindow(typeof(NewAssessment));
         window.Show();
-
-
     }
-
     void OnGUI()
     {
         if (TreatmentScript == null)
         {
-            assesment = new GameObject();
-            assesment.AddComponent<Treatment>();
-            TreatmentScript = (Treatment)assesment.GetComponent<Treatment>();
+            assessment = new GameObject();
+            assessment.AddComponent<Treatment>();
+            TreatmentScript = (Treatment)assessment.GetComponent<Treatment>();
 
             TreatmentScript.notes = "";
             TreatmentScript.TreatmentCategory = new System.Collections.Generic.List<category>();
@@ -38,13 +36,60 @@ public class NewTreatment : EditorWindow
         }
 
         GUILayout.BeginHorizontal(EditorStyles.helpBox);
-        if (GUILayout.Button("Create Assesment"))
+        if (GUILayout.Button("Create Assessment"))
         {
             Close();
         }
         if (GUILayout.Button("Close"))
         {
-            DestroyImmediate(assesment.gameObject);
+            DestroyImmediate(assessment.gameObject);
+            Close();
+        }
+        GUILayout.EndHorizontal();
+    }
+}
+
+public class NewTreatment : EditorWindow
+{
+    public GameObject Treatment;
+    Treatment TreatmentScript;
+
+    // Add menu named "My Window" to the Window menu
+
+    [MenuItem("Patient Pack/New Treatment")]
+    static void Init()
+    {
+        // Get existing open window or if none, make a new one:
+        NewTreatment window = (NewTreatment)EditorWindow.GetWindow(typeof(NewTreatment));
+        window.Show();
+    }
+    void OnGUI()
+    {
+        if (TreatmentScript == null)
+        {
+            Treatment = new GameObject();
+            Treatment.AddComponent<Treatment>();
+            TreatmentScript = (Treatment)Treatment.GetComponent<Treatment>();
+
+            TreatmentScript.notes = "";
+            TreatmentScript.TreatmentCategory = new System.Collections.Generic.List<category>();
+            TreatmentScript.chanceOfSuccess = 100;
+            TreatmentScript.EnableModels = new System.Collections.Generic.List<GameObject>();
+            TreatmentScript.DisableModels = new System.Collections.Generic.List<GameObject>();
+        }
+        else
+        {
+            TreatmentScript.name = EditorGUILayout.TextField("Name: ", TreatmentScript.name);
+        }
+
+        GUILayout.BeginHorizontal(EditorStyles.helpBox);
+        if (GUILayout.Button("Create Treatment"))
+        {
+            Close();
+        }
+        if (GUILayout.Button("Close"))
+        {
+            DestroyImmediate(Treatment.gameObject);
             Close();
         }
         GUILayout.EndHorizontal();
