@@ -32,7 +32,7 @@ public class NewAssessment : EditorWindow
     }
     void OnGUI()
     {
-
+        Color defaultcolor = GUI.color;
         if (TreatmentScript == null)
         {
             assessment = new GameObject();
@@ -67,10 +67,14 @@ public class NewAssessment : EditorWindow
             {
                 GUILayout.BeginHorizontal(EditorStyles.helpBox);
                 TreatmentScript.TreatmentCategory[count] = (category)EditorGUILayout.EnumPopup(TreatmentScript.TreatmentCategory[count]);
-                if (GUILayout.Button("Remove"))
+                var style = new GUIStyle(GUI.skin.button);
+                style.normal.textColor = Color.white;
+                GUI.backgroundColor = Color.red;
+                if (GUILayout.Button("Remove", style))
                 {
                     RemoveCategory(count);
                 }
+                GUI.backgroundColor = defaultcolor;
                 GUILayout.EndHorizontal();
             }
             if (GUILayout.Button("Add category"))
@@ -262,6 +266,7 @@ public class TreatmentScriptEditor : Editor
     private GUIStyle headerStyle = new GUIStyle();
     public void BasicInfo()
     {
+        Color defaultColor = GUI.color;
         //Basic info
         headerStyle.fontSize = 20; //change the font size
         headerStyle.fontStyle = FontStyle.Bold;
@@ -295,10 +300,14 @@ public class TreatmentScriptEditor : Editor
         {
             GUILayout.BeginHorizontal(EditorStyles.helpBox);
             myTarget.TreatmentCategory[count] = (category)EditorGUILayout.EnumPopup(myTarget.TreatmentCategory[count]);
-            if (GUILayout.Button("Remove"))
+            var style = new GUIStyle(GUI.skin.button);
+            style.normal.textColor = Color.white;
+            GUI.backgroundColor = Color.red;
+            if (GUILayout.Button("Remove", style))
             {
                 RemoveCategory(count);
             }
+            GUI.backgroundColor = defaultColor;
             GUILayout.EndHorizontal();
         }
         if (GUILayout.Button("Add category"))
@@ -508,6 +517,7 @@ public class TreatmentScriptEditor : Editor
     }
     public void models()
     {
+        Color defaultColor = GUI.color;
         GUILayout.BeginHorizontal(EditorStyles.helpBox);
             GUILayout.BeginVertical(EditorStyles.helpBox);
                 headerStyle.fontSize = 15; //change the font size
@@ -517,10 +527,14 @@ public class TreatmentScriptEditor : Editor
                 {
                     GUILayout.BeginHorizontal(EditorStyles.helpBox);
                     myTarget.EnableModels[count] = (GameObject)EditorGUILayout.ObjectField(myTarget.EnableModels[count], typeof(GameObject), true);
-                    if (GUILayout.Button("Remove"))
+                    var style = new GUIStyle(GUI.skin.button);
+                    style.normal.textColor = Color.white;
+                    GUI.backgroundColor = Color.red;
+                    if (GUILayout.Button("Remove", style))
                         {
                             RemoveModelEnable(count);
                         }
+                    GUI.backgroundColor = defaultColor;
                     GUILayout.EndHorizontal();
                 }
                 if (GUILayout.Button("Add model to enable"))
@@ -537,10 +551,14 @@ public class TreatmentScriptEditor : Editor
             {
             GUILayout.BeginHorizontal(EditorStyles.helpBox);
             myTarget.DisableModels[count] = (GameObject)EditorGUILayout.ObjectField(myTarget.DisableModels[count], typeof(GameObject), true);
-                if (GUILayout.Button("Remove"))
+            var style = new GUIStyle(GUI.skin.button);
+            style.normal.textColor = Color.white;
+            GUI.backgroundColor = Color.red;
+            if (GUILayout.Button("Remove", style))
                 {
                     RemoveModelDisable(count);
                 }
+            GUI.backgroundColor = defaultColor;
             GUILayout.EndHorizontal();
             }
             if (GUILayout.Button("Add model to disable"))
