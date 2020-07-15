@@ -16,8 +16,23 @@ public class NewAssessment : EditorWindow
         NewAssessment window = (NewAssessment)EditorWindow.GetWindow(typeof(NewAssessment));
         window.Show();
     }
+    public void multiMedia()
+    {
+        TreatmentScript.hasMultiMedia = EditorGUILayout.Toggle("Use multi-media?", TreatmentScript.hasMultiMedia);
+        GUILayout.BeginVertical(EditorStyles.helpBox);
+        if (TreatmentScript.hasMultiMedia == true)
+        {
+            TreatmentScript.image = (Material)EditorGUILayout.ObjectField(TreatmentScript.image, typeof(Material), true);
+            if (TreatmentScript.image != null)
+            {
+                TreatmentScript.size = EditorGUILayout.Vector2Field("Media size (cm): ", TreatmentScript.size);
+            }
+        }
+        GUILayout.EndVertical();
+    }
     void OnGUI()
     {
+
         if (TreatmentScript == null)
         {
             assessment = new GameObject();
@@ -29,10 +44,40 @@ public class NewAssessment : EditorWindow
             TreatmentScript.chanceOfSuccess = 100;
             TreatmentScript.EnableModels = new System.Collections.Generic.List<GameObject>();
             TreatmentScript.DisableModels = new System.Collections.Generic.List<GameObject>();
+            TreatmentScript.vitalMods = new System.Collections.Generic.List<vital_mod>();
         }
         else
         {
             TreatmentScript.name = EditorGUILayout.TextField("Name: ", TreatmentScript.name);
+            TreatmentScript.required = EditorGUILayout.Toggle("required: ", TreatmentScript.required);
+            GUILayout.Label("Text result");
+            TreatmentScript.successCaption = EditorGUILayout.TextArea(TreatmentScript.successCaption, GUILayout.MinHeight(50));
+            TreatmentScript.TimeItTakesDoctor = EditorGUILayout.FloatField("Time it takes doctor", TreatmentScript.TimeItTakesDoctor);
+            TreatmentScript.hasSuccessAudio = EditorGUILayout.Toggle("Use audio", TreatmentScript.hasSuccessAudio);
+            if (TreatmentScript.hasSuccessAudio == true)
+            {
+                EditorGUI.indentLevel++;
+                TreatmentScript.SuccessAudioClip = (AudioClip)EditorGUILayout.ObjectField(TreatmentScript.SuccessAudioClip, typeof(AudioClip), true);
+                EditorGUI.indentLevel--;
+            }
+            multiMedia();
+            GUILayout.Label("Categories: ");
+            GUILayout.BeginVertical(EditorStyles.helpBox);
+            for (int count = 0; count < TreatmentScript.TreatmentCategory.Count; count++)
+            {
+                GUILayout.BeginHorizontal(EditorStyles.helpBox);
+                TreatmentScript.TreatmentCategory[count] = (category)EditorGUILayout.EnumPopup(TreatmentScript.TreatmentCategory[count]);
+                if (GUILayout.Button("Remove"))
+                {
+                    RemoveCategory(count);
+                }
+                GUILayout.EndHorizontal();
+            }
+            if (GUILayout.Button("Add category"))
+            {
+                AddCategory();
+            }
+            GUILayout.EndVertical();
         }
 
         GUILayout.BeginHorizontal(EditorStyles.helpBox);
@@ -46,6 +91,21 @@ public class NewAssessment : EditorWindow
             Close();
         }
         GUILayout.EndHorizontal();
+    }
+    public void AddCategory()
+    {
+        if (TreatmentScript.TreatmentCategory.Count != 0)
+        {
+            TreatmentScript.TreatmentCategory.Add(TreatmentScript.TreatmentCategory[TreatmentScript.TreatmentCategory.Count - 1]);
+        }
+        else
+        {
+            TreatmentScript.TreatmentCategory.Add(new category());
+        }
+    }
+    public void RemoveCategory(int index)
+    {
+        TreatmentScript.TreatmentCategory.RemoveAt(index);
     }
 }
 
@@ -217,12 +277,38 @@ public class TreatmentScriptEditor : Editor
             myTarget.preRequiredTreatment = EditorGUILayout.TextField("Pre-required treatment: ", myTarget.preRequiredTreatment);
             EditorGUI.indentLevel--;
         }
-        myTarget.isBad = EditorGUILayout.Toggle("Shouldn't be used: ", myTarget.isBad);
-        if (myTarget.isBad == true || myTarget.required == true)
+        else
         {
-            GUILayout.Label("Debrief when they did it wrong:");
-            myTarget.badString = EditorGUILayout.TextArea(myTarget.badString, GUILayout.MinHeight(50));
+            myTarget.isBad = EditorGUILayout.Toggle("Shouldn't be used: ", myTarget.isBad);
+            if (myTarget.isBad == true || myTarget.required == true)
+            {
+                GUILayout.Label("Debrief when they did it wrong:");
+                myTarget.badString = EditorGUILayout.TextArea(myTarget.badString, GUILayout.MinHeight(50));
+            }
         }
+
+
+
+        GUILayout.Label("Categories: ");
+        GUILayout.BeginVertical(EditorStyles.helpBox);
+        for (int count = 0; count < myTarget.TreatmentCategory.Count; count++)
+        {
+            GUILayout.BeginHorizontal(EditorStyles.helpBox);
+            myTarget.TreatmentCategory[count] = (category)EditorGUILayout.EnumPopup(myTarget.TreatmentCategory[count]);
+            if (GUILayout.Button("Remove"))
+            {
+                RemoveCategory(count);
+            }
+            GUILayout.EndHorizontal();
+        }
+        if (GUILayout.Button("Add category"))
+        {
+            AddCategory();
+        }
+        GUILayout.EndVertical();
+
+
+
         multiMedia();
         GUILayout.EndVertical();
 
@@ -468,16 +554,32 @@ public class TreatmentScriptEditor : Editor
     {
         myTarget.EnableModels.RemoveAt(index);
     }
+
     public void AddModelEnable()
     {
-        if (myTarget.EnableModels.Count!=0)
+        if (myTarget.EnableModels.Count != 0)
         {
-            myTarget.EnableModels.Add(myTarget.EnableModels[myTarget.EnableModels.Count-1]);
+            myTarget.EnableModels.Add(myTarget.EnableModels[myTarget.EnableModels.Count - 1]);
         }
         else
         {
             myTarget.EnableModels.Add(myTarget.gameObject);
         }
+    }
+    public void AddCategory()
+    {
+        if (myTarget.TreatmentCategory.Count != 0)
+        {
+            myTarget.TreatmentCategory.Add(myTarget.TreatmentCategory[myTarget.TreatmentCategory.Count - 1]);
+        }
+        else
+        {
+            myTarget.TreatmentCategory.Add(new category());
+        }
+    }
+    public void RemoveCategory(int index)
+    {
+        myTarget.TreatmentCategory.RemoveAt(index);
     }
     public void RemoveModelDisable(int index)
     {
