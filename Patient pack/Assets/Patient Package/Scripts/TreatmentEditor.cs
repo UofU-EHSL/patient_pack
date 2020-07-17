@@ -19,16 +19,18 @@ public class NewAssessment : EditorWindow
     public void multiMedia()
     {
         TreatmentScript.hasMultiMedia = EditorGUILayout.Toggle("Use multi-media?", TreatmentScript.hasMultiMedia);
-        GUILayout.BeginVertical(EditorStyles.helpBox);
+
         if (TreatmentScript.hasMultiMedia == true)
         {
+            GUILayout.BeginVertical(EditorStyles.helpBox);
             TreatmentScript.image = (Material)EditorGUILayout.ObjectField(TreatmentScript.image, typeof(Material), true);
             if (TreatmentScript.image != null)
             {
                 TreatmentScript.size = EditorGUILayout.Vector2Field("Media size (cm): ", TreatmentScript.size);
             }
+            GUILayout.EndVertical();
         }
-        GUILayout.EndVertical();
+
     }
     void OnGUI()
     {
@@ -62,7 +64,7 @@ public class NewAssessment : EditorWindow
             }
             multiMedia();
             GUILayout.Label("Categories: ");
-            GUILayout.BeginVertical(EditorStyles.helpBox);
+            GUILayout.BeginVertical();
             for (int count = 0; count < TreatmentScript.TreatmentCategory.Count; count++)
             {
                 GUILayout.BeginHorizontal(EditorStyles.helpBox);
@@ -84,7 +86,8 @@ public class NewAssessment : EditorWindow
             GUILayout.EndVertical();
         }
 
-        GUILayout.BeginHorizontal(EditorStyles.helpBox);
+        GUILayout.Space(15);
+        GUILayout.BeginHorizontal();
         if (GUILayout.Button("Create Assessment"))
         {
             Close();
@@ -192,7 +195,7 @@ public class TreatmentScriptEditor : Editor
         {
             MenuOption();
             GUI.backgroundColor = Color.black;
-            GUILayout.BeginHorizontal(EditorStyles.helpBox);
+            GUILayout.BeginHorizontal();
                 if (GUILayout.Button("← Basic info", style))
                 {
                     Page(0);
@@ -208,7 +211,7 @@ public class TreatmentScriptEditor : Editor
         {
             vitalOptions();
             GUI.backgroundColor = Color.black;
-            GUILayout.BeginHorizontal(EditorStyles.helpBox);
+            GUILayout.BeginHorizontal();
                 if (GUILayout.Button("← Menu options", style))
                 {
                     Page(1);
@@ -224,7 +227,7 @@ public class TreatmentScriptEditor : Editor
         {
             DevOptions();
             GUI.backgroundColor = Color.black;
-            GUILayout.BeginHorizontal(EditorStyles.helpBox);
+            GUILayout.BeginHorizontal();
                 if (GUILayout.Button("← Vital options", style))
                 {
                     Page(2);
@@ -295,7 +298,7 @@ public class TreatmentScriptEditor : Editor
 
 
         GUILayout.Label("Categories: ");
-        GUILayout.BeginVertical(EditorStyles.helpBox);
+        GUILayout.BeginVertical();
         for (int count = 0; count < myTarget.TreatmentCategory.Count; count++)
         {
             GUILayout.BeginHorizontal(EditorStyles.helpBox);
@@ -442,11 +445,11 @@ public class TreatmentScriptEditor : Editor
 
                     GUILayout.BeginVertical(EditorStyles.helpBox);
                     EditorGUI.indentLevel++;
-                    GUILayout.BeginHorizontal(EditorStyles.helpBox);
+                    GUILayout.BeginHorizontal();
                     //GUILayout.Label("Instantly fixes " + myTarget.vitalMods[count].fixes_issues[count2].name.ToString());
 
 
-                    GUILayout.BeginHorizontal(EditorStyles.helpBox);
+                    GUILayout.BeginHorizontal();
                     //GUILayout.Label(myTarget.vitalMods[0].fixes_issues[count2].name.ToString());
 
                     var style = new GUIStyle(GUI.skin.button);
@@ -499,16 +502,18 @@ public class TreatmentScriptEditor : Editor
     public void multiMedia()
     {
         myTarget.hasMultiMedia = EditorGUILayout.Toggle("Use multi-media?", myTarget.hasMultiMedia);
-        GUILayout.BeginVertical(EditorStyles.helpBox);
-            if (myTarget.hasMultiMedia == true)
-            {
-                myTarget.image = (Material)EditorGUILayout.ObjectField(myTarget.image, typeof(Material), true);
+        
+        if (myTarget.hasMultiMedia == true)
+        {
+            GUILayout.BeginVertical(EditorStyles.helpBox);
+            myTarget.image = (Material)EditorGUILayout.ObjectField(myTarget.image, typeof(Material), true);
                 if (myTarget.image != null)
                 {
                     myTarget.size = EditorGUILayout.Vector2Field("Media size (cm): ", myTarget.size);
                 }
-            }
-        GUILayout.EndVertical();
+            GUILayout.EndVertical();
+        }
+
     }
 
     public void Page(int GoToPage)
@@ -518,7 +523,7 @@ public class TreatmentScriptEditor : Editor
     public void models()
     {
         Color defaultColor = GUI.color;
-        GUILayout.BeginHorizontal(EditorStyles.helpBox);
+        GUILayout.BeginHorizontal();
             GUILayout.BeginVertical(EditorStyles.helpBox);
                 headerStyle.fontSize = 15; //change the font size
                 headerStyle.fontStyle = FontStyle.Bold;
