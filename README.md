@@ -12,7 +12,7 @@
 
 ### Patient Pack
 
-  Patient pack is a folder in the project that if you want to use in a different project then you will need to export it as a unity asset and then import it into a new project. When you look at the vital monitor scene in this directory you will see a fully functional and dynamic vital monitor. You will also notice in the top menu bar you now have an option for "Patient pack" this is used to create new treatment and assesments. They both work off of the Treatment scrip and if you create one of them it will create a new game object with the options you put into the create wizard.
+  Patient pack is a folder in the project that if you want to use in a different project then you will need to export it as a unity asset and then import it into a new project. When you look at the vital monitor scene in this directory you will see a fully functional and dynamic vital monitor. You will also notice in the top menu bar, you now have an option for "Patient pack" this is used to create new treatment and assesments. They both work off of the Treatment script and if you create one of them it will create a new game object with the options you put into the create wizard.
 
   Once you have a treatment or assesment you can move it into the 'Patient Monitor -> vital mods' and it will start to modify the vitals. You can place treatments, assessments, or conditions in any order.
 
@@ -25,3 +25,6 @@ We have added a few different packages from other amazing github projects out th
 ### Drive post
 
   This is used to post data to a google drive doc. You first need to make a form on forms.google.com and each question will be the header in the sheet. You have to have each question set to a form of a string so short answer or long answer. Then you have to inspect the element of the forms when you are viewing it and find the entry ID it will look something like this entry.395933536 we then have to put the BASE_URL in so that will be something like https://docs.google.com/forms/d/e/ABunchOfRandomLookingLetters Make sure that it does NOT have the /viewform or /edit at the end. Your own script should be what changes the values then you can call the submit function. You can see an example of this in the trauma project under the MenuTracking script.
+
+### Other
+  I've also added a txt file that has links to other useful projects.
