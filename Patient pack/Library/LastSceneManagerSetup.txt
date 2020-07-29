@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Voxel/Scenes/Main.unity
+- path: Assets/Patient Package/Scenes/VitalsScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
