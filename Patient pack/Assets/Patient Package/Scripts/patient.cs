@@ -31,6 +31,11 @@ public class vital
     }
 }
 
+public static class globalPatient
+{
+    public static List<Treatment> treatments;
+}
+
 [System.Serializable]
 public class vitalMod
 {
@@ -43,10 +48,9 @@ public class vitalMod
 public class patient : MonoBehaviour
 {
     public GameObject Vital_mods;
-    public Treatment[] treatments;
     public vital[] Vitals_visuals;
     public vitalMod[] mods;
-
+    public List<Treatment> modItems;
     public Color NoColor;
     public Color LowColor;
     public Color MidColor;
@@ -204,8 +208,6 @@ public class patient : MonoBehaviour
 
     public void Start()
     {
-        
-
         foreach (vital single in Vitals_visuals)
         {
             single.initColor = single.color;
@@ -215,7 +217,8 @@ public class patient : MonoBehaviour
     }
     public void Update()
     {
-        treatments = GetComponentsInChildren<Treatment>();
+        globalPatient.treatments = new List<Treatment>(Vital_mods.GetComponentsInChildren<Treatment>());
+        modItems = globalPatient.treatments;
         updateViz();
     }
 }
