@@ -34,6 +34,7 @@ public class vital
 public static class globalPatient
 {
     public static List<Treatment> treatments;
+    public static List<string> treatmentsString;
 }
 
 [System.Serializable]
@@ -219,6 +220,12 @@ public class patient : MonoBehaviour
     {
         globalPatient.treatments = new List<Treatment>(Vital_mods.GetComponentsInChildren<Treatment>());
         modItems = globalPatient.treatments;
+        globalPatient.treatmentsString = new List<string>();
+
+        foreach (Treatment item in globalPatient.treatments)
+        {
+            globalPatient.treatmentsString.Add(item.name);
+        }
         updateViz();
     }
 }

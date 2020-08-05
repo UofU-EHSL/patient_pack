@@ -16,18 +16,21 @@ public struct Statement
 public class ifelse : MonoBehaviour
 {
     public Statement[] statements;
-    public patient patientScript;
-    public List<Treatment> builtList;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        builtList = globalPatient.treatments;
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        builtList = globalPatient.treatments;
+        int i = 0;
+        foreach (Statement item in statements)
+        {
+            if (globalPatient.treatmentsString.Contains(item.TreatmentOrCondition))
+            {
+                statements[i].satisfied = true;
+            }
+            else
+            {
+                statements[i].satisfied = false;
+            }
+            i++;
+        }
     }
 }
